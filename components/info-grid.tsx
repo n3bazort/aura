@@ -33,7 +33,7 @@ export function InfoGrid() {
             return (
               <div
                 key={feature.title}
-                ref={(el) => refs.current[index] = el}
+                ref={(el) => { refs.current[index] = el }}
                 className={`scroll-animate ${visibilities[index] ? "visible" : ""}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
