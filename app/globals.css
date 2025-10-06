@@ -261,4 +261,16 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+  /* Animación suave para imágenes desde la izquierda */
+  .image-slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .image-slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

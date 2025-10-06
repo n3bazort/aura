@@ -1,3 +1,7 @@
+"use client"
+
+import { useEffect, useRef, useState } from "react"
+
 export function PageHeader({
   title,
   description,
@@ -9,6 +13,32 @@ export function PageHeader({
   imageSrc?: string
   imageAlt?: string
 }) {
+  const imageRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current)
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current)
+      }
+    }
+  }, [])
+
   return (
     <section className="relative bg-primary py-0 px-6">
       <div className="max-w-7xl mx-auto">
@@ -23,9 +53,12 @@ export function PageHeader({
             </p>
           </div>
 
-          {/* Imagen opcional - sin márgenes extra */}
+          {/* Imagen opcional - con animación de entrada desde la izquierda */}
           {imageSrc && (
-            <div className="hidden lg:block">
+            <div 
+              ref={imageRef}
+              className={`hidden lg:block image-slide-in-left ${isVisible ? "visible" : ""}`}
+            >
               <img
                 src={imageSrc}
                 alt={imageAlt || title}
