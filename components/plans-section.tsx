@@ -7,7 +7,7 @@ import { useScrollAnimation, useScrollAnimations } from "@/hooks/use-scroll-anim
 
 const plans = [
   {
-    name: "Plan Básico",
+    name: "Plan Vip ",
     price: "$5",
     period: "/mes",
     features: ["Acceso a talleres gratuitos", "Foro comunitario", "Noticias destacadas", "Recursos descargables"],

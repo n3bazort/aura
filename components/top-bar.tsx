@@ -68,18 +68,14 @@ export function TopBar() {
               <div className="space-y-6 py-6">
                 {/* Benefits */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-foreground">Beneficios Exclusivos VIP</h3>
+                  <h3 className="text-xl font-bold text-foreground">Beneficios Plan Familiar Aura</h3>
                   <div className="grid gap-3">
                     {[
                       "Acceso ilimitado a todos los talleres y capacitaciones",
-                      "Consultas prioritarias con profesionales especializados",
-                      "Descuentos del 30% en sesiones terapéuticas",
                       "Acceso anticipado a nuevos eventos y conferencias",
-                      "Biblioteca completa de recursos descargables",
-                      "Guías personalizadas y planes de intervención",
+                      "Biblioteca completa de recursos por áreas de desarrollo",
                       "Soporte prioritario 24/7",
-                      "Comunidad VIP exclusiva con expertos",
-                      "Webinars mensuales con especialistas internacionales",
+                      "Webinar con especialistas invitados",
                       "Descuentos en productos y servicios de partners",
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-start gap-3">
@@ -96,13 +92,13 @@ export function TopBar() {
                 <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-950/20 dark:to-amber-900/20 p-6 rounded-2xl border-2 border-amber-400">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <h4 className="text-2xl font-bold text-foreground">Plan VIP Anual</h4>
+                      <h4 className="text-2xl font-bold text-foreground">Plan Aura Anual</h4>
                       <p className="text-sm text-muted-foreground">Ahorra 40% vs. plan mensual</p>
                     </div>
                     <Badge className="bg-amber-500 text-amber-950">Más Popular</Badge>
                   </div>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-5xl font-bold text-foreground">$99</span>
+                    <span className="text-5xl font-bold text-foreground">$20</span>
                     <span className="text-muted-foreground">/año</span>
                   </div>
                   <Button className="w-full bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-amber-950 font-semibold text-lg py-6 rounded-xl">
@@ -113,12 +109,12 @@ export function TopBar() {
                 <div className="bg-card p-6 rounded-2xl border">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <h4 className="text-xl font-bold text-foreground">Plan VIP Mensual</h4>
+                      <h4 className="text-xl font-bold text-foreground">Plan Aura Gratuito</h4>
                       <p className="text-sm text-muted-foreground">Cancela cuando quieras</p>
                     </div>
                   </div>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-4xl font-bold text-foreground">$15</span>
+                    <span className="text-4xl font-bold text-foreground">$0</span>
                     <span className="text-muted-foreground">/mes</span>
                   </div>
                   <Button variant="outline" className="w-full text-lg py-6 rounded-xl bg-transparent">

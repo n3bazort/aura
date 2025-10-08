@@ -72,8 +72,7 @@ export function AboutContent() {
             Acompañamos con ciencia, amor e inclusión
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Somos una comunidad dedicada a apoyar a familias en el camino del autismo, conectando profesionales
-            especializados con quienes más los necesitan.
+            Somos una comunidad dedicada a apoyar a familias en el camino del autismo que conecta, guía y transforma vidas.
           </p>
         </div>
       </section>
@@ -87,9 +86,8 @@ export function AboutContent() {
             </div>
             <h2 className="text-3xl font-bold text-foreground">Nuestra Misión</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Facilitar el acceso a servicios de calidad para personas con autismo y sus familias, creando una red de
-              apoyo integral que combine ciencia, empatía y comunidad. Trabajamos para que cada familia encuentre el
-              acompañamiento profesional que necesita y se sienta respaldada en cada paso del camino.
+              Empoderar a los padrres y cuidadores aa travez de una plataforma digital que les brinde orientaciòn, recursos y acompañamiento interla en su camino de crianza, fortaleciendo su bienestar emcional y su confianza. Desde ese equilibrio, 
+              Aura impulsa el desarrollo pleno de los niños con autismo, promoviendo su inclusiòn. autonomìa y felicidad.
             </p>
           </Card>
 
@@ -99,10 +97,8 @@ export function AboutContent() {
             </div>
             <h2 className="text-3xl font-bold text-foreground">Nuestra Visión</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Ser la plataforma líder en Ecuador y Latinoamérica para la conexión entre familias y profesionales
-              especializados en autismo. Aspiramos a construir una sociedad más inclusiva donde la neurodiversidad sea
-              celebrada y cada persona tenga las oportunidades que merece para desarrollar su máximo potencial.
-            </p>
+            En 5 años, la plataforma será referente en inclusión y desarrollo infantil de varias necesidades específicas.
+ </p>
           </Card>
         </div>
       </section>
@@ -113,15 +109,14 @@ export function AboutContent() {
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestra Historia</h2>
             <p className="text-xl text-muted-foreground text-pretty">
-              Un camino construido con amor, ciencia y comunidad
+              Un camino nacido del amor, la empatía y el deseo de acompañar mejor.
             </p>
+
           </div>
 
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Aura nació en 2015 del sueño de un grupo de profesionales y padres que compartían una visión común: crear
-              un espacio donde las familias con niños en el espectro autista pudieran encontrar apoyo integral,
-              información confiable y una comunidad que los comprendiera.
+              Ahora nació en Guayaquil como una respuesta al sentir de muchos padres que buscaban orientación, contentación, contención y guía en el camino de acompañar a sus hijos autistas, punto. No desde la carencia, coma, sino desde el profundo deseo de encontrar un espacio que los entienda, coma, los sostenga y los inspire a crecer juntos. Hoy se ha convertido en una plataforma integral que conecta corazones, conocimientos y experiencias, punto. En Ahora creemos que cada familia merece sentirse acompañada, cada niño merece ser visto desde su potencial, coma, y cada paso merece ser celebrado, punto. Más que una plataforma, coma, Ahora es una comunidad viva que une ciencia, coma, amor y propósito, punto. Juntos, coma, padres y profesionales construimos un camino de aprendizaje compartido hacia una sociedad más consistente, coma, empática y expresiva.
             </p>
             <p>
               Lo que comenzó como un pequeño grupo de apoyo en Quito, se ha transformado en una plataforma que conecta a

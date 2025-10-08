@@ -123,7 +123,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span>Quito, Ecuador</span>
+                <span>Guayaquil, Ecuador</span>
               </li>
             </ul>
             <div className="flex gap-3 mt-4">

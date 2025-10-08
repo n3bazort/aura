@@ -38,8 +38,7 @@ export function HeroSection() {
 
             {/* Párrafo */}
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-pretty max-w-2xl">
-              Aura es una plataforma para madres, padres y cuidadores de niños con autismo. Encuentra información
-              confiable, formación y comunidad.
+              Aura es una plataforma para madres, padres y cuidadores de niños dentro del Espectro Autista. Encuentra información confiable, formación de calidad y apoyo de la comunidad.
             </p>
 
             {/* Estadísticas */}
