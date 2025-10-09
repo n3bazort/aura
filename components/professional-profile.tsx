@@ -39,7 +39,7 @@ export function ProfessionalProfile({ professionalId }: { professionalId: string
   return (
     <div className="min-h-screen bg-background">
       {/* Back Button */}
-      <div className="bg-card border-b border-border py-4 px-6">
+      <div className="bg-card border-b border-[color:var(--border)] py-4 px-6">
         <div className="max-w-7xl mx-auto">
           <Button variant="ghost" onClick={() => router.back()} className="gap-2">
             <ArrowLeft className="h-4 w-4" />

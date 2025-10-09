@@ -103,7 +103,7 @@ export function AutismInfoSection() {
               <div
                 key={index}
                 data-card-index={index}
-                className={`bg-card border border-border rounded-2xl p-6 shadow-lg transition-all duration-700 ${
+                className={`bg-card border border-[color:var(--border)] rounded-2xl p-6 shadow-lg transition-all duration-700 ${
                   visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
@@ -129,7 +129,7 @@ export function AutismInfoSection() {
               <div
                 key={index}
                 data-card-index={cardIndex}
-                className={`bg-card border border-border rounded-2xl p-8 shadow-lg transition-all duration-700 delay-${index * 100} ${
+                className={`bg-card border border-[color:var(--border)] rounded-2xl p-8 shadow-lg transition-all duration-700 delay-${index * 100} ${
                   visibleCards.includes(cardIndex) ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                 }`}
               >

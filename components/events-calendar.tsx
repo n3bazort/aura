@@ -157,7 +157,7 @@ export function EventsCalendar() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 px-6 bg-card border-b border-border sticky top-16 z-30">
+      <section className="py-8 px-6 bg-card border-b border-[color:var(--border)] sticky top-16 z-30">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <Filter className="h-5 w-5 text-primary" />

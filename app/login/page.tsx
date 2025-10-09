@@ -47,7 +47,7 @@ export default function LoginPage() {
         </Link>
 
         {/* Login Card */}
-        <div className="bg-card border border-border rounded-3xl shadow-2xl p-8 space-y-6">
+        <div className="bg-card border border-[color:var(--border)] rounded-3xl shadow-2xl p-8 space-y-6">
           {/* Header */}
           <div className="text-center space-y-2">
             <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-4">
@@ -102,7 +102,7 @@ export default function LoginPage() {
           {/* Divider */}
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-border" />
+              <div className="w-full border-t border-[color:var(--border)]" />
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="bg-card px-4 text-muted-foreground">¿No tienes cuenta?</span>

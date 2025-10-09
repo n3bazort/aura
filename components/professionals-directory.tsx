@@ -44,7 +44,7 @@ export function ProfessionalsDirectory() {
     <div className="min-h-screen bg-background">
       {/* Filter Section - Colapsable con auto-cierre al salir con el mouse */}
       <section 
-        className="bg-card border-b border-border sticky top-16 z-30"
+        className="bg-card border-b border-[color:var(--border)] sticky top-16 z-30"
         onMouseLeave={() => setIsFilterExpanded(false)}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

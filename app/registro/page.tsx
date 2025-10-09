@@ -76,7 +76,7 @@ export default function RegisterPage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4">
         <div className="w-full max-w-md">
-          <div className="bg-card border border-border rounded-3xl shadow-2xl p-8 space-y-6 text-center">
+          <div className="bg-card border border-[color:var(--border)] rounded-3xl shadow-2xl p-8 space-y-6 text-center">
             <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/20 flex items-center justify-center mx-auto">
               <Check className="h-10 w-10 text-green-600 dark:text-green-400" />
             </div>
@@ -100,7 +100,7 @@ export default function RegisterPage() {
         </Link>
 
         {/* Register Card */}
-        <div className="bg-card border border-border rounded-3xl shadow-2xl p-8 space-y-6">
+        <div className="bg-card border border-[color:var(--border)] rounded-3xl shadow-2xl p-8 space-y-6">
           {/* Header */}
           <div className="text-center space-y-2">
             <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-4">
@@ -220,7 +220,7 @@ export default function RegisterPage() {
           {/* Divider */}
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-border" />
+              <div className="w-full border-t border-[color:var(--border)]" />
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="bg-card px-4 text-muted-foreground">¿Ya tienes cuenta?</span>
