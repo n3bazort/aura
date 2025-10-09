@@ -22,10 +22,10 @@ import {
 const workshopsData: Record<string, any> = {
   "1": {
     id: 1,
-    title: "Comunicación Aumentativa y Alternativa",
+    title: "Estrategias de Comunicación Efectiva",
     category: "Comunicación",
     price: "$10",
-    image: "/workshop-communication.jpg",
+    image: "/1.png",
     duration: "2 horas",
     level: "Básico",
     instructor: "Dra. María González",
@@ -76,10 +76,10 @@ const workshopsData: Record<string, any> = {
   },
   "2": {
     id: 2,
-    title: "Rutinas Visuales para el Hogar",
+    title: "Creación de Rutinas Visuales",
     category: "Rutinas",
     price: "$8",
-    image: "/workshop-routines.jpg",
+    image: "/2.png",
     duration: "1.5 horas",
     level: "Básico",
     instructor: "Lic. Carlos Mendoza",
@@ -124,6 +124,114 @@ const workshopsData: Record<string, any> = {
       },
       {
         title: "Guía de Implementación",
+        type: "pdf",
+      },
+    ],
+  },
+  "3": {
+    id: 3,
+    title: "Autocuidado y Bienestar Parental",
+    category: "Apoyo Emocional",
+    price: "$12",
+    image: "/3.png",
+    duration: "3 horas",
+    level: "Todos",
+    instructor: "Dr. Juan Pérez",
+    description:
+      "Herramientas prácticas para el manejo del estrés, autocuidado y fortalecimiento emocional. Conecta con otros padres y comparte experiencias en un espacio seguro.",
+    objectives: [
+      "Identificar y manejar el estrés parental",
+      "Desarrollar rutinas de autocuidado sostenibles",
+      "Fortalecer la resiliencia emocional",
+      "Crear redes de apoyo efectivas",
+    ],
+    content: [
+      {
+        title: "Reconociendo el Agotamiento Parental",
+        type: "video",
+        duration: "30 min",
+      },
+      {
+        title: "Técnicas de Autocuidado",
+        type: "video",
+        duration: "40 min",
+      },
+      {
+        title: "Construcción de Resiliencia",
+        type: "video",
+        duration: "45 min",
+      },
+      {
+        title: "Redes de Apoyo y Comunidad",
+        type: "video",
+        duration: "35 min",
+      },
+    ],
+    resources: [
+      {
+        title: "Guía de Autocuidado Diario",
+        type: "pdf",
+      },
+      {
+        title: "Ejercicios de Mindfulness",
+        type: "pdf",
+      },
+      {
+        title: "Plan de Acción Personal",
+        type: "pdf",
+      },
+    ],
+  },
+  "4": {
+    id: 4,
+    title: "Actividades Sensoriales en el Hogar",
+    category: "Integración Sensorial",
+    price: "$15",
+    image: "/4.png",
+    duration: "2.5 horas",
+    level: "Intermedio",
+    instructor: "Dra. Isabel Ramírez",
+    description:
+      "Implementa actividades de integración sensorial en casa usando materiales accesibles. Aprende a crear un espacio sensorial personalizado para tu hijo.",
+    objectives: [
+      "Comprender los principios de integración sensorial",
+      "Identificar necesidades sensoriales individuales",
+      "Crear actividades sensoriales con materiales caseros",
+      "Diseñar un espacio sensorial en casa",
+    ],
+    content: [
+      {
+        title: "Fundamentos de Integración Sensorial",
+        type: "video",
+        duration: "25 min",
+      },
+      {
+        title: "Evaluación de Necesidades Sensoriales",
+        type: "video",
+        duration: "30 min",
+      },
+      {
+        title: "Actividades Sensoriales Prácticas",
+        type: "video",
+        duration: "45 min",
+      },
+      {
+        title: "Creación de Espacios Sensoriales",
+        type: "video",
+        duration: "40 min",
+      },
+    ],
+    resources: [
+      {
+        title: "Guía de Actividades Sensoriales",
+        type: "pdf",
+      },
+      {
+        title: "Lista de Materiales Sensoriales",
+        type: "pdf",
+      },
+      {
+        title: "Planos para Espacios Sensoriales",
         type: "pdf",
       },
     ],

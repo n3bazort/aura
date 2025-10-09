@@ -7,63 +7,52 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Filter, Clock, BarChart3 } from "lucide-react"
 
-const categories = ["Todos", "Comunicación", "Rutinas", "Apoyo Emocional", "Integración Sensorial", "Educación"]
+const categories = ["Todos", "Comunicación", "Rutinas", "Apoyo Emocional", "Integración Sensorial"]
 
 const workshops = [
   {
     id: 1,
-    title: "Comunicación Aumentativa y Alternativa",
+    title: "Estrategias de Comunicación Efectiva",
     category: "Comunicación",
     price: "$10",
-    image: "/workshop-communication.jpg",
+    image: "/1.png",
     duration: "2 horas",
     level: "Básico",
-    description: "Aprende estrategias efectivas de comunicación para niños con TEA.",
+    description: "Descubre técnicas de comunicación aumentativa y alternativa para facilitar la expresión de tu hijo. Aprende a usar pictogramas, gestos y tecnología de apoyo.",
     instructor: "Dra. María González",
   },
   {
     id: 2,
-    title: "Rutinas Visuales para el Hogar",
+    title: "Creación de Rutinas Visuales",
     category: "Rutinas",
     price: "$8",
-    image: "/workshop-routines.jpg",
+    image: "/2.png",
     duration: "1.5 horas",
     level: "Básico",
-    description: "Crea rutinas visuales efectivas que faciliten el día a día.",
+    description: "Aprende a diseñar e implementar rutinas visuales efectivas que reduzcan la ansiedad y mejoren la autonomía de tu hijo en las actividades diarias.",
     instructor: "Lic. Carlos Mendoza",
   },
   {
     id: 3,
-    title: "Apoyo Emocional para Padres",
+    title: "Autocuidado y Bienestar Parental",
     category: "Apoyo Emocional",
     price: "$12",
-    image: "/workshop-emotional-support.jpg",
+    image: "/3.png",
     duration: "3 horas",
     level: "Todos",
-    description: "Herramientas para el autocuidado y manejo del estrés parental.",
+    description: "Herramientas prácticas para el manejo del estrés, autocuidado y fortalecimiento emocional. Conecta con otros padres y comparte experiencias en un espacio seguro.",
     instructor: "Dr. Juan Pérez",
   },
   {
     id: 4,
-    title: "Integración Sensorial en Casa",
+    title: "Actividades Sensoriales en el Hogar",
     category: "Integración Sensorial",
     price: "$15",
-    image: "/workshop-sensory.jpg",
+    image: "/4.png",
     duration: "2.5 horas",
     level: "Intermedio",
-    description: "Actividades sensoriales para implementar en el hogar.",
+    description: "Implementa actividades de integración sensorial en casa usando materiales accesibles. Aprende a crear un espacio sensorial personalizado para tu hijo.",
     instructor: "Dra. Isabel Ramírez",
-  },
-  {
-    id: 5,
-    title: "Estrategias de Inclusión Escolar",
-    category: "Educación",
-    price: "$10",
-    image: "/workshop-inclusion.jpg",
-    duration: "2 horas",
-    level: "Intermedio",
-    description: "Colabora efectivamente con el sistema educativo.",
-    instructor: "Dr. Fernando Castro",
   },
 ]
 

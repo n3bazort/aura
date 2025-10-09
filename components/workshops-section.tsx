@@ -9,23 +9,23 @@ import { useScrollAnimation, useScrollAnimations } from "@/hooks/use-scroll-anim
 
 const workshops = [
   {
-    title: "Comunicación Aumentativa",
+    title: "Estrategias de Comunicación",
     price: "$10",
-    image: "/workshop-communication.jpg",
+    image: "/1.png",
     duration: "2 horas",
     level: "Básico",
   },
   {
     title: "Rutinas Visuales",
     price: "$8",
-    image: "/workshop-routines.jpg",
+    image: "/2.png",
     duration: "1.5 horas",
     level: "Básico",
   },
   {
-    title: "Apoyo Emocional para Padres",
+    title: "Bienestar Parental",
     price: "$12",
-    image: "/workshop-emotional-support.jpg",
+    image: "/3.png",
     duration: "3 horas",
     level: "Todos",
   },
