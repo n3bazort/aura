@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
 
 /* Custom Aura theme with warm, inclusive colors */
 :root {
@@ -91,7 +90,7 @@
   --shadow-color: #000000;
 }
 
-@theme inline {
+:root {
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
@@ -272,15 +271,5 @@
   .image-slide-in-left.visible {
     opacity: 1;
     transform: translateX(0);
-  }
-
-  /* Ocultar scrollbar pero mantener funcionalidad de scroll */
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
   }
 }
