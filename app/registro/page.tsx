@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useAuth } from "@/lib/auth-context"
+import { enviarDatosASheet } from "@/lib/google-sheets"
 import { ArrowLeft, Loader2, Check } from "lucide-react"
 
 export default function RegisterPage() {
@@ -16,6 +17,9 @@ export default function RegisterPage() {
   const { register } = useAuth()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const [city, setCity] = useState("")
+  const [userType, setUserType] = useState("Padre/Cuidador")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
@@ -38,18 +42,32 @@ export default function RegisterPage() {
 
     setLoading(true)
 
-    // Simulate loading
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      // Enviar datos a Google Sheets (sin contraseña por seguridad)
+      await enviarDatosASheet({
+        nombre: name,
+        email: email,
+        telefono: phone,
+        tipoUsuario: userType,
+        ciudad: city,
+      })
 
-    const success = await register(name, email, password)
+      // Simular registro en el sistema
+      await new Promise((resolve) => setTimeout(resolve, 1500))
 
-    if (success) {
-      setSuccess(true)
-      setTimeout(() => {
-        router.push("/")
-      }, 2000)
-    } else {
-      setError("Este correo ya está registrado")
+      const success = await register(name, email, password)
+
+      if (success) {
+        setSuccess(true)
+        setTimeout(() => {
+          router.push("/")
+        }, 2000)
+      } else {
+        setError("Este correo ya está registrado")
+        setLoading(false)
+      }
+    } catch (err) {
+      setError("Hubo un error al crear la cuenta. Por favor intenta de nuevo.")
       setLoading(false)
     }
   }
@@ -95,7 +113,7 @@ export default function RegisterPage() {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Nombre completo</Label>
+              <Label htmlFor="name">Nombre completo *</Label>
               <Input
                 id="name"
                 type="text"
@@ -108,7 +126,7 @@ export default function RegisterPage() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">Correo electrónico</Label>
+              <Label htmlFor="email">Correo electrónico *</Label>
               <Input
                 id="email"
                 type="email"
@@ -121,11 +139,50 @@ export default function RegisterPage() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password">Contraseña</Label>
+              <Label htmlFor="phone">Teléfono (opcional)</Label>
+              <Input
+                id="phone"
+                type="tel"
+                placeholder="+593 99 123 4567"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="rounded-xl"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="city">Ciudad (opcional)</Label>
+              <Input
+                id="city"
+                type="text"
+                placeholder="Quito, Guayaquil, etc."
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                className="rounded-xl"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="userType">Tipo de usuario</Label>
+              <select
+                id="userType"
+                value={userType}
+                onChange={(e) => setUserType(e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-input bg-background text-foreground"
+              >
+                <option value="Padre/Cuidador">Padre/Cuidador</option>
+                <option value="Profesional">Profesional</option>
+                <option value="Familiar">Familiar</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="password">Contraseña *</Label>
               <Input
                 id="password"
                 type="password"
-                placeholder="••••••••"
+                placeholder="Mínimo 6 caracteres"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -134,7 +191,7 @@ export default function RegisterPage() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="confirmPassword">Confirmar contraseña</Label>
+              <Label htmlFor="confirmPassword">Confirmar contraseña *</Label>
               <Input
                 id="confirmPassword"
                 type="password"

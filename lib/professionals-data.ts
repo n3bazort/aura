@@ -8,7 +8,7 @@ export const professionalsData = [
     phone: "+593 99 123 4567",
     email: "juan.perez@aura.com",
     website: "www.drjuanperez.com",
-    image: "/4.png",
+    image: "/profesionales/h5.jpg",
     experience: 12,
     bio: "Especialista en desarrollo infantil y trastornos del espectro autista con más de una década de experiencia. Comprometido con el bienestar emocional y cognitivo de cada niño.",
     achievements: [
@@ -17,7 +17,7 @@ export const professionalsData = [
       "Miembro activo de la Asociación Ecuatoriana de Autismo",
       "Publicaciones en revistas científicas internacionales",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h5.jpg", "/profesionales/h5.jpg", "/profesionales/h5.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7937094474845!2d-78.48785492426895!3d-0.18004099984238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f0f6d3c!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus",
   },
@@ -29,7 +29,7 @@ export const professionalsData = [
     phone: "+593 99 234 5678",
     email: "maria.gonzalez@aura.com",
     website: "www.mariagonzalez.com",
-    image: "/4.png",
+    image: "/profesionales/m1.jpg",
     experience: 8,
     bio: "Terapeuta ocupacional especializada en integración sensorial y desarrollo de habilidades motoras finas en niños con TEA.",
     achievements: [
@@ -38,7 +38,7 @@ export const professionalsData = [
       "Formación en Método DIR/Floortime",
       "Colaboradora en programas de inclusión escolar",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/m1.jpg", "/profesionales/m1.jpg", "/profesionales/m1.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-79.88!3d-2.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTEnMjQuMCJTIDc5wrA1Mic0OC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
@@ -50,7 +50,7 @@ export const professionalsData = [
     phone: "+593 99 345 6789",
     email: "carlos.mendoza@aura.com",
     website: "www.carlosmendoza.com",
-    image: "/4.png",
+    image: "/profesionales/h6.jpg",
     experience: 15,
     bio: "Educador especial con amplia experiencia en estrategias de enseñanza inclusiva y adaptaciones curriculares para estudiantes con necesidades especiales.",
     achievements: [
@@ -59,7 +59,7 @@ export const professionalsData = [
       "Coordinador de programas de inclusión escolar",
       "Capacitador de docentes en educación especial",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h6.jpg", "/profesionales/h6.jpg", "/profesionales/h6.jpg"],
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-80.45!3d-1.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDMnMDAuMCJTIDgwwrAyNycwMC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
   {
@@ -70,7 +70,7 @@ export const professionalsData = [
     phone: "+593 99 456 7890",
     email: "ana.rodriguez@aura.com",
     website: "www.anarodriguez.com",
-    image: "/4.png",
+    image: "/profesionales/m2.jpg",
     experience: 10,
     bio: "Odontóloga pediátrica especializada en atención a pacientes con necesidades especiales, utilizando técnicas de sensibilización y manejo conductual.",
     achievements: [
@@ -79,7 +79,7 @@ export const professionalsData = [
       "Formación en Técnicas de Sensibilización Sensorial",
       "Miembro de la Asociación de Odontología Infantil",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/m2.jpg", "/profesionales/m2.jpg", "/profesionales/m2.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7937094474845!2d-78.48785492426895!3d-0.18004099984238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f0f6d3c!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus",
   },
@@ -91,7 +91,7 @@ export const professionalsData = [
     phone: "+593 99 567 8901",
     email: "pedro.sanchez@aura.com",
     website: "www.pedrosanchez.com",
-    image: "/4.png",
+    image: "/profesionales/h8.jpg",
     experience: 7,
     bio: "Fonoaudiólogo especializado en terapia del lenguaje y comunicación alternativa para niños con trastornos del espectro autista.",
     achievements: [
@@ -100,7 +100,7 @@ export const professionalsData = [
       "Especialización en Trastornos del Lenguaje Infantil",
       "Terapeuta certificado en Hanen Program",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h8.jpg", "/profesionales/h8.jpg", "/profesionales/h8.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-79.88!3d-2.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTEnMjQuMCJTIDc5wrA1Mic0OC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
@@ -112,7 +112,7 @@ export const professionalsData = [
     phone: "+593 99 678 9012",
     email: "luis.martinez@aura.com",
     website: "www.luismartinez.com",
-    image: "/4.png",
+    image: "/profesionales/h9.jpg",
     experience: 20,
     bio: "Neurólogo pediátrico con dos décadas de experiencia en diagnóstico y tratamiento de trastornos del neurodesarrollo, incluyendo TEA.",
     achievements: [
@@ -121,7 +121,7 @@ export const professionalsData = [
       "Publicaciones en revistas científicas internacionales",
       "Conferencista en congresos de neurología infantil",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h9.jpg", "/profesionales/h9.jpg", "/profesionales/h9.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7937094474845!2d-78.48785492426895!3d-0.18004099984238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f0f6d3c!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus",
   },
@@ -133,7 +133,7 @@ export const professionalsData = [
     phone: "+593 99 789 0123",
     email: "carmen.torres@aura.com",
     website: "www.carmentorres.com",
-    image: "/4.png",
+    image: "/profesionales/m3.jpg",
     experience: 14,
     bio: "Psiquiatra infantil especializada en el tratamiento de comorbilidades psiquiátricas en niños con TEA, con enfoque en terapias integradas.",
     achievements: [
@@ -142,7 +142,7 @@ export const professionalsData = [
       "Formación en Terapia Cognitivo-Conductual",
       "Miembro de la Asociación de Psiquiatría Infantil",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/m3.jpg", "/profesionales/m3.jpg", "/profesionales/m3.jpg"],
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-80.45!3d-1.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDMnMDAuMCJTIDgwwrAyNycwMC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
   {
@@ -153,7 +153,7 @@ export const professionalsData = [
     phone: "+593 99 890 1234",
     email: "roberto.flores@aura.com",
     website: "www.robertoflores.com",
-    image: "/4.png",
+    image: "/profesionales/h10.jpg",
     experience: 9,
     bio: "Psicólogo clínico infantil con enfoque en terapias basadas en evidencia para el manejo de conductas y desarrollo de habilidades socioemocionales.",
     achievements: [
@@ -162,7 +162,7 @@ export const professionalsData = [
       "Formación en Terapia de Juego",
       "Especialización en Intervención Temprana",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h10.jpg", "/profesionales/h10.jpg", "/profesionales/h10.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-79.88!3d-2.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTEnMjQuMCJTIDc5wrA1Mic0OC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
@@ -174,7 +174,7 @@ export const professionalsData = [
     phone: "+593 99 901 2345",
     email: "isabel.ramirez@aura.com",
     website: "www.isabelramirez.com",
-    image: "/4.png",
+    image: "/profesionales/M4.jpg",
     experience: 11,
     bio: "Terapeuta ocupacional con experiencia en integración sensorial y desarrollo de autonomía en actividades de la vida diaria para niños con TEA.",
     achievements: [
@@ -183,7 +183,7 @@ export const professionalsData = [
       "Formación en Método Bobath",
       "Certificación en Terapia Asistida con Animales",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/M4.jpg", "/profesionales/M4.jpg", "/profesionales/M4.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7937094474845!2d-78.48785492426895!3d-0.18004099984238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f0f6d3c!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus",
   },
@@ -195,7 +195,7 @@ export const professionalsData = [
     phone: "+593 99 012 3456",
     email: "fernando.castro@aura.com",
     website: "www.fernandocastro.com",
-    image: "/4.png",
+    image: "/profesionales/h33.png",
     experience: 13,
     bio: "Educador especial con enfoque en desarrollo de programas individualizados de educación y estrategias de enseñanza estructurada para estudiantes con TEA.",
     achievements: [
@@ -204,7 +204,7 @@ export const professionalsData = [
       "Formación en Análisis Conductual Aplicado (ABA)",
       "Consultor en inclusión educativa",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h33.png", "/profesionales/h33.png", "/profesionales/h33.png"],
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-80.45!3d-1.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDMnMDAuMCJTIDgwwrAyNycwMC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
   {
@@ -215,7 +215,7 @@ export const professionalsData = [
     phone: "+593 99 123 4568",
     email: "patricia.morales@aura.com",
     website: "www.patriciamorales.com",
-    image: "/4.png",
+    image: "/profesionales/m77.png",
     experience: 6,
     bio: "Odontóloga pediátrica con formación especializada en atención odontológica para pacientes con necesidades especiales y técnicas de manejo conductual positivo.",
     achievements: [
@@ -224,7 +224,7 @@ export const professionalsData = [
       "Formación en Técnicas de Desensibilización",
       "Colaboradora en programas de salud oral inclusiva",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/m77.png", "/profesionales/m77.png", "/profesionales/m77.png"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-79.88!3d-2.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTEnMjQuMCJTIDc5wrA1Mic0OC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
@@ -236,7 +236,7 @@ export const professionalsData = [
     phone: "+593 99 234 5679",
     email: "diego.vargas@aura.com",
     website: "www.diegovargas.com",
-    image: "/4.png",
+    image: "/profesionales/h34.png",
     experience: 8,
     bio: "Fonoaudiólogo especializado en el desarrollo del lenguaje expresivo y comprensivo, con experiencia en sistemas de comunicación alternativa para niños con TEA.",
     achievements: [
@@ -245,7 +245,7 @@ export const professionalsData = [
       "Formación en Prompt Therapy",
       "Terapeuta certificado en Makaton",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h34.png", "/profesionales/h34.png", "/profesionales/h34.png"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7937094474845!2d-78.48785492426895!3d-0.18004099984238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f0f6d3c!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus",
   },
@@ -257,7 +257,7 @@ export const professionalsData = [
     phone: "+593 99 345 6780",
     email: "andres.herrera@aura.com",
     website: "www.andresherrera.com",
-    image: "/4.png",
+    image: "/profesionales/h35.png",
     experience: 18,
     bio: "Neurólogo infantil con amplia experiencia en evaluación neurológica integral y manejo de trastornos del neurodesarrollo en población pediátrica.",
     achievements: [
@@ -266,7 +266,7 @@ export const professionalsData = [
       "Investigador en Neurociencias del Autismo",
       "Docente universitario en Neurología Infantil",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h35.png", "/profesionales/h35.png", "/profesionales/h35.png"],
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-80.45!3d-1.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDMnMDAuMCJTIDgwwrAyNycwMC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
   {
@@ -277,7 +277,7 @@ export const professionalsData = [
     phone: "+593 99 456 7891",
     email: "sofia.jimenez@aura.com",
     website: "www.sofiajimenez.com",
-    image: "/4.png",
+    image: "/profesionales/m1.jpg",
     experience: 16,
     bio: "Psiquiatra infantil con experiencia en el tratamiento integral de trastornos del neurodesarrollo y comorbilidades psiquiátricas, con enfoque multidisciplinario.",
     achievements: [
@@ -286,7 +286,7 @@ export const professionalsData = [
       "Formación en Mindfulness para Niños y Adolescentes",
       "Coordinadora de equipos multidisciplinarios",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/m1.jpg", "/profesionales/m1.jpg", "/profesionales/m1.jpg"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-79.88!3d-2.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTEnMjQuMCJTIDc5wrA1Mic0OC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
   },
@@ -298,7 +298,7 @@ export const professionalsData = [
     phone: "+593 99 567 8902",
     email: "miguel.ortiz@aura.com",
     website: "www.miguelortiz.com",
-    image: "/4.png",
+    image: "/profesionales/h36.png",
     experience: 5,
     bio: "Psicólogo infantil joven y dinámico, especializado en terapias conductuales y desarrollo de habilidades sociales en niños con trastornos del espectro autista.",
     achievements: [
@@ -307,7 +307,7 @@ export const professionalsData = [
       "Especialización en Intervención Temprana en TEA",
       "Facilitador de grupos de habilidades sociales",
     ],
-    photos: ["/4.png", "/4.png", "/4.png"],
+    photos: ["/profesionales/h36.png", "/profesionales/h36.png", "/profesionales/h36.png"],
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7937094474845!2d-78.48785492426895!3d-0.18004099984238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f0f6d3c!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus",
   },

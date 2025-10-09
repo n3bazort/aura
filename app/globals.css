@@ -90,7 +90,7 @@
   --shadow-color: #000000;
 }
 
-:root {
+@theme inline {
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
@@ -158,13 +158,14 @@
   --shadow-x: var(--shadow-x);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
 }
 
 @layer utilities {
@@ -271,5 +272,39 @@
   .image-slide-in-left.visible {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  /* Animación de carrusel infinito para el equipo */
+  @keyframes scroll-infinite {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-infinite {
+    animation: scroll-infinite 40s linear infinite;
+  }
+
+  .animate-scroll-infinite:hover {
+    animation-play-state: paused;
+  }
+
+  /* Scroll horizontal suave para carrusel */
+  #team-carousel {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  #team-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  #team-carousel {
+    scroll-behavior: smooth;
   }
 }

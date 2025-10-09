@@ -46,7 +46,11 @@ export function TopBar() {
           <Dialog>
             <DialogTrigger asChild>
               <Button
-                className="bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-amber-950 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
+                style={{
+                  background: 'linear-gradient(to right, #68ff8e, #3dd46f)',
+                  color: '#0a3d1f'
+                }}
                 size="sm"
               >
                 <Gem className="h-4 w-4 mr-2" />
@@ -57,7 +61,7 @@ export function TopBar() {
             <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
               <DialogHeader>
                 <DialogTitle className="text-3xl font-bold flex items-center gap-2">
-                  <Gem className="h-8 w-8 text-amber-500" />
+                  <Gem className="h-8 w-8" style={{ color: '#68ff8e' }} />
                   Actualiza a Aura VIP
                 </DialogTitle>
                 <DialogDescription className="text-lg">
@@ -89,19 +93,28 @@ export function TopBar() {
                 </div>
 
                 {/* Pricing */}
-                <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-950/20 dark:to-amber-900/20 p-6 rounded-2xl border-2 border-amber-400">
+                <div className="p-6 rounded-2xl border-2" style={{ 
+                  background: 'linear-gradient(to bottom right, #e8ffe8, #d0ffd8)',
+                  borderColor: '#68ff8e' 
+                }}>
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <h4 className="text-2xl font-bold text-foreground">Plan Aura </h4>
                       <p className="text-sm text-muted-foreground">Ahorra 40% vs. plan mensual</p>
                     </div>
-                    <Badge className="bg-amber-500 text-amber-950">Más Popular</Badge>
+                    <Badge style={{ backgroundColor: '#68ff8e', color: '#0a3d1f' }}>Más Popular</Badge>
                   </div>
                   <div className="flex items-baseline gap-2 mb-4">
                     <span className="text-5xl font-bold text-foreground">$20</span>
                     <span className="text-muted-foreground">/año</span>
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-amber-950 font-semibold text-lg py-6 rounded-xl">
+                  <Button 
+                    className="w-full font-semibold text-lg py-6 rounded-xl"
+                    style={{
+                      background: 'linear-gradient(to right, #68ff8e, #3dd46f)',
+                      color: '#0a3d1f'
+                    }}
+                  >
                     Comenzar Ahora
                   </Button>
                 </div>

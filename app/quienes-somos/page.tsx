@@ -14,7 +14,7 @@ export default function QuienesSomosPage() {
         <PageHeader
           title="Quiénes Somos"
           description="Conoce nuestra misión, valores y el equipo detrás de Aura"
-          imageSrc="/team-ana-perez.jpg"
+          imageSrc="/ninahome.png"
           imageAlt="Equipo Aura"
         />
         <AboutContent />

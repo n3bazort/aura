@@ -1,7 +1,10 @@
+"use client"
+
+import { useRef } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Users, BookOpen, Target, Award, Sparkles } from "lucide-react"
+import { Heart, Users, BookOpen, Target, Award, Sparkles, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
 const values = [
@@ -32,31 +35,31 @@ const team = [
     name: "Leandro Matute",
     role: "Neg. Internacionales",
     image: "/team/leandro.jpg",
-    description: "Especialista en TEA con 15 años de experiencia en intervención temprana.",
+    description: "Finanzas.",
   },
   {
     name: "Camila Salas",
     role: "Educadora Especial",
     image: "/team/camila.jpg",
-    description: "Experta en comunicación aumentativa y alternativa para niños con autismo.",
+    description: "CEO/Directora",
   },
   {
     name: "Domenica Reyes",
     role: "Marketing",
     image: "/team/domenica.jpg",
-    description: "Investigador en neurociencia del desarrollo y trastornos del neurodesarrollo.",
+    description: "Diseño y IT.",
   },
   {
     name: "Byron Valencia ",
     role: "Gestión Deportiva",
     image: "/team/byron.jpg",
-    description: "Especialista en integración sensorial y actividades de la vida diaria.",
+    description: "Marketing.",
   },
    {
     name: "Maylin Chavarría ",
     role: "Educadora Especial",
     image: "/team/maylin.jpg",
-    description: "Especialista en integración sensorial y actividades de la vida diaria.",
+    description: "Vicepresidenta Ejecutiva.",
   },
 ]
 
@@ -85,7 +88,7 @@ export function AboutContent() {
 
       {/* Mission & Vision */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto px-[10%] grid md:grid-cols-2 gap-8">
           <Card className="p-8 space-y-4 hover:shadow-xl transition-shadow">
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
               <Target className="h-6 w-6 text-primary" />
@@ -111,7 +114,7 @@ export function AboutContent() {
 
       {/* Our Story */}
       <section className="py-20 px-6 bg-card">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto px-[10%] space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestra Historia</h2>
             <p className="text-xl text-muted-foreground text-pretty">
@@ -133,9 +136,92 @@ export function AboutContent() {
         </div>
       </section>
 
+           {/* Team - Carrusel Continuo con Controles */}
+      <section className="py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-[10%]">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestro Equipo</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+              Profesionales apasionados dedicados a hacer la diferencia
+            </p>
+          </div>
+
+          {/* Carrusel horizontal continuo con controles */}
+          <div className="relative">
+            {/* Botón Anterior */}
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 hover:bg-background shadow-lg"
+              onClick={() => {
+                const carousel = document.getElementById('team-carousel')
+                if (carousel) {
+                  carousel.scrollBy({ left: -300, behavior: 'smooth' })
+                }
+              }}
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+
+            {/* Botón Siguiente */}
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/95 hover:bg-background shadow-lg"
+              onClick={() => {
+                const carousel = document.getElementById('team-carousel')
+                if (carousel) {
+                  carousel.scrollBy({ left: 300, behavior: 'smooth' })
+                }
+              }}
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+
+            <div 
+              id="team-carousel"
+              className="overflow-hidden"
+              onWheel={(e) => {
+                e.preventDefault()
+                const carousel = e.currentTarget
+                carousel.scrollBy({ left: e.deltaY, behavior: 'auto' })
+              }}
+            >
+              <div className="flex gap-8 animate-scroll-infinite">
+                {/* Duplicamos el array para crear el efecto infinito */}
+                {[...team, ...team].map((member, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-[240px] group"
+                  >
+                    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
+                      {/* Foto más compacta con ratio 4:5 */}
+                      <div className="aspect-[4/5] overflow-hidden bg-muted relative">
+                        <img
+                          src={member.image || "/placeholder.svg"}
+                          alt={member.name}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        {/* Overlay con gradiente */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                      <div className="p-5 space-y-3">
+                        <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                        <p className="text-xs text-primary font-semibold uppercase tracking-wide">{member.role}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{member.description}</p>
+                      </div>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-[10%]">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestros Valores</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
@@ -162,7 +248,7 @@ export function AboutContent() {
 
       {/* Stats */}
       <section className="py-20 px-6 bg-gradient-to-br from-primary/5 via-background to-accent/5">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-[10%]">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestro Impacto</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
@@ -181,39 +267,7 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestro Equipo</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Profesionales apasionados dedicados a hacer la diferencia
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 space-y-2">
-                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
-                  <p className="text-sm text-primary font-medium">{member.role}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{member.description}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+ 
 
       {/* CTA */}
       <section className="py-20 px-6 bg-card">

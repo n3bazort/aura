@@ -50,7 +50,7 @@ export function ProfessionalProfile({ professionalId }: { professionalId: string
 
       {/* Profile Header */}
       <section className="py-12 px-6 bg-gradient-to-br from-primary/10 via-background to-accent/10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Profile Image */}
             <div className="lg:col-span-1">
@@ -110,7 +110,7 @@ export function ProfessionalProfile({ professionalId }: { professionalId: string
 
       {/* Achievements */}
       <section className="py-12 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <Card className="p-8">
             <div className="flex items-center gap-3 mb-6">
               <Award className="h-6 w-6 text-primary" />
@@ -130,7 +130,7 @@ export function ProfessionalProfile({ professionalId }: { professionalId: string
 
       {/* Photos */}
       <section className="py-12 px-6 bg-primary/5">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <h2 className="text-2xl font-bold text-foreground mb-6">En Acción</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {professional.photos.map((photo: string, index: number) => (
@@ -148,7 +148,7 @@ export function ProfessionalProfile({ professionalId }: { professionalId: string
 
       {/* Location Map */}
       <section className="py-12 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <h2 className="text-2xl font-bold text-foreground mb-6">Ubicación</h2>
           <Card className="overflow-hidden">
             <div className="aspect-video">

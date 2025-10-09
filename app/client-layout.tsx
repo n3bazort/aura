@@ -5,6 +5,7 @@ import type React from "react"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { AuthProvider } from "@/lib/auth-context"
+import { StickyBottomAd } from "@/components/sticky-bottom-ad"
 
 function ClientLayoutContent({
   children,
@@ -14,6 +15,9 @@ function ClientLayoutContent({
   return (
     <>
       {children}
+      {/* Banner inferior sticky que aparece en todas las páginas */}
+      {/* Se excluye de la página de comunidad */}
+      <StickyBottomAd excludePaths={["/comunidad"]} />
       <Analytics />
     </>
   )

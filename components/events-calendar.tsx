@@ -20,7 +20,7 @@ const events = [
     location: "Centro Comunitario Quito",
     description:
       "Exploraremos estrategias para crear ambientes educativos inclusivos que celebren la neurodiversidad y apoyen el aprendizaje de todos los estudiantes.",
-    image: "/event-neurodiversity.jpg",
+    image: "/eventos/1.png",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const events = [
     location: "Sala Virtual Zoom",
     description:
       "Aprende técnicas de comunicación efectiva y positiva para fortalecer la relación con tu hijo y fomentar su desarrollo emocional.",
-    image: "/event-communication.jpg",
+    image: "/eventos/2.png",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const events = [
     location: "Auditorio Universidad Central",
     description:
       "Presentación de las últimas investigaciones y avances científicos en el entendimiento y tratamiento del Trastorno del Espectro Autista.",
-    image: "/event-science.jpg",
+    image: "/eventos/3.png",
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const events = [
     location: "Online",
     description:
       "Descubre actividades y estrategias sensoriales que puedes implementar en casa para apoyar el desarrollo de tu hijo.",
-    image: "/event-sensory.jpg",
+    image: "/eventos/4.png",
   },
   {
     id: 5,
@@ -68,7 +68,7 @@ const events = [
     location: "Centro Aura Guayaquil",
     description:
       "Espacio seguro para compartir experiencias, desafíos y estrategias con otras familias que viven situaciones similares.",
-    image: "/event-support-group.jpg",
+    image: "/eventos/5.png",
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ const events = [
     location: "Centro Comunitario Manabí",
     description:
       "Herramientas y estrategias para preparar a adolescentes con TEA para la transición a la vida adulta independiente.",
-    image: "/event-adult-life.jpg",
+    image: "/eventos/6.png",
   },
   {
     id: 7,
@@ -92,19 +92,7 @@ const events = [
     location: "Online",
     description:
       "Conoce los derechos de las personas con TEA y la legislación vigente en Ecuador para garantizar su inclusión y bienestar.",
-    image: "/event-rights.jpg",
-  },
-  {
-    id: 8,
-    date: "2025-12-03",
-    title: "Conferencia: Tecnología y autismo",
-    speaker: "Ing. Diego Vargas",
-    time: "18:00 - 20:00",
-    type: "Conferencia",
-    location: "Centro de Innovación Quito",
-    description:
-      "Exploración de aplicaciones, dispositivos y tecnologías que pueden apoyar el desarrollo y la comunicación en personas con TEA.",
-    image: "/event-technology.jpg",
+    image: "/eventos/OIP.webp",
   },
 ]
 
@@ -193,7 +181,7 @@ export function EventsCalendar() {
 
       {/* Events Grid */}
       <section className="py-12 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredEvents.map((event) => {
               const { day, month } = formatShortDate(event.date)
