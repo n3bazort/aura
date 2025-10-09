@@ -8,6 +8,11 @@ import { useScrollAnimation, useScrollAnimations } from "@/hooks/use-scroll-anim
 
 const professionals = [
   {
+
+
+    //Editar y enlazar por categoria los medicos que tengo disponibles
+
+    //////////////////////////////////////////////////////sheeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     title: "Psicólogos Infantiles",
     description: "Especialistas en desarrollo y comportamiento infantil.",
     image: "/child-psychologist.jpg",

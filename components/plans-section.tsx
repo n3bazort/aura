@@ -7,39 +7,27 @@ import { useScrollAnimation, useScrollAnimations } from "@/hooks/use-scroll-anim
 
 const plans = [
   {
-    name: "Plan Vip ",
-    price: "$5",
+    name: "Plan Gratuito",
+    price: "$0",
     period: "/mes",
-    features: ["Acceso a talleres gratuitos", "Foro comunitario", "Noticias destacadas", "Recursos descargables"],
+    features: ["Acceso limitado al foro (5 publicaciones/mes) ", "Contenido básico de nutrición", "Acceso a 2 talleres gratuitos/mes", "Recursos básicos descargables"],
     popular: false,
   },
   {
     name: "Plan Plus",
-    price: "$10",
-    period: "/mes",
-    features: [
-      "Todo del plan básico",
-      "Acceso a talleres exclusivos",
-      "Descuentos en eventos",
-      "Consultas mensuales",
-      "Contenido premium",
-    ],
-    popular: true,
-  },
-  {
-    name: "Plan Premium",
     price: "$20",
     period: "/mes",
-    features: [
-      "Todo del plan plus",
-      "Sesiones personalizadas con expertos",
-      "Acceso prioritario a capacitaciones",
-      "Asesoría personalizada",
-      "Grupo privado de apoyo",
-      "Certificados de talleres",
-    ],
-    popular: false,
+features: [
+  "Acceso ilimitado a todos los talleres y capacitaciones",
+  "Acceso anticipado a nuevos eventos y conferencias",
+  "Biblioteca completa de recursos por áreas de desarrollo",
+  "Soporte prioritario 24/7",
+  "Webinar con especialistas invitados",
+  "Descuentos en productos y servicios de partners"
+],
+    popular: true,
   },
+  
 ]
 
 export function PlansSection() {

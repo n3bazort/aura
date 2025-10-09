@@ -29,36 +29,42 @@ const values = [
 
 const team = [
   {
-    name: "Dra. Ana Pérez",
-    role: "Directora y Psicóloga Clínica",
-    image: "/team-ana-perez.jpg",
+    name: "Leandro Matute",
+    role: "Neg. Internacionales",
+    image: "/team/leandro.jpg",
     description: "Especialista en TEA con 15 años de experiencia en intervención temprana.",
   },
   {
-    name: "Lic. Marta Gómez",
-    role: "Terapeuta del Lenguaje",
-    image: "/team-marta-gomez.jpg",
+    name: "Camila Salas",
+    role: "Educadora Especial",
+    image: "/team/camila.jpg",
     description: "Experta en comunicación aumentativa y alternativa para niños con autismo.",
   },
   {
-    name: "Dr. Luis Herrera",
-    role: "Neurólogo Pediatra",
-    image: "/team-luis-herrera.jpg",
+    name: "Domenica Reyes",
+    role: "Marketing",
+    image: "/team/domenica.jpg",
     description: "Investigador en neurociencia del desarrollo y trastornos del neurodesarrollo.",
   },
   {
-    name: "Lic. Patricia Ruiz",
-    role: "Terapeuta Ocupacional",
-    image: "/team-patricia-ruiz.jpg",
+    name: "Byron Valencia ",
+    role: "Gestión Deportiva",
+    image: "/team/byron.jpg",
+    description: "Especialista en integración sensorial y actividades de la vida diaria.",
+  },
+   {
+    name: "Maylin Chavarría ",
+    role: "Educadora Especial",
+    image: "/team/maylin.jpg",
     description: "Especialista en integración sensorial y actividades de la vida diaria.",
   },
 ]
 
 const stats = [
-  { number: "500+", label: "Familias Acompañadas" },
-  { number: "50+", label: "Profesionales Certificados" },
-  { number: "200+", label: "Talleres Realizados" },
-  { number: "10+", label: "Años de Experiencia" },
+  { number: "100+", label: "Familias Acompañadas" },
+  { number: "20+", label: "Profesionales Certificados" },
+  { number: "30+", label: "Talleres Realizados" },
+  { number: "2+", label: "Años de Experiencia" },
 ]
 
 export function AboutContent() {
@@ -86,7 +92,7 @@ export function AboutContent() {
             </div>
             <h2 className="text-3xl font-bold text-foreground">Nuestra Misión</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Empoderar a los padrres y cuidadores aa travez de una plataforma digital que les brinde orientaciòn, recursos y acompañamiento interla en su camino de crianza, fortaleciendo su bienestar emcional y su confianza. Desde ese equilibrio, 
+              Empoderar a los padrres y cuidadores aa travez de una plataforma digital que les brinde orientaciòn, recursos y acompañamiento interla en su camino de crianza, fortaleciendo su bienestar emcional y su confianza. Desde ese equilibrio,
               Aura impulsa el desarrollo pleno de los niños con autismo, promoviendo su inclusiòn. autonomìa y felicidad.
             </p>
           </Card>
@@ -97,8 +103,8 @@ export function AboutContent() {
             </div>
             <h2 className="text-3xl font-bold text-foreground">Nuestra Visión</h2>
             <p className="text-muted-foreground leading-relaxed">
-            En 5 años, la plataforma será referente en inclusión y desarrollo infantil de varias necesidades específicas.
- </p>
+              En 5 años, la plataforma será referente en inclusión y desarrollo infantil de varias necesidades específicas.
+            </p>
           </Card>
         </div>
       </section>
@@ -116,17 +122,12 @@ export function AboutContent() {
 
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Ahora nació en Guayaquil como una respuesta al sentir de muchos padres que buscaban orientación, contentación, contención y guía en el camino de acompañar a sus hijos autistas, punto. No desde la carencia, coma, sino desde el profundo deseo de encontrar un espacio que los entienda, coma, los sostenga y los inspire a crecer juntos. Hoy se ha convertido en una plataforma integral que conecta corazones, conocimientos y experiencias, punto. En Ahora creemos que cada familia merece sentirse acompañada, cada niño merece ser visto desde su potencial, coma, y cada paso merece ser celebrado, punto. Más que una plataforma, coma, Ahora es una comunidad viva que une ciencia, coma, amor y propósito, punto. Juntos, coma, padres y profesionales construimos un camino de aprendizaje compartido hacia una sociedad más consistente, coma, empática y expresiva.
+             Aura nació en Guayaquil como una respuesta al sentir de muchos padres que buscaban orientación, contención y guía en el camino de acompañar a sus hijos autistas. No desde la carencia, sino desde el profundo deseo de encontrar un espacio que los entienda, los sostenga y los inspire a crecer junto a ellos.
             </p>
             <p>
-              Lo que comenzó como un pequeño grupo de apoyo en Quito, se ha transformado en una plataforma que conecta a
-              cientos de familias con profesionales especializados en todo Ecuador. Hemos crecido, pero nuestra esencia
-              permanece: acompañar con empatía, guiar con ciencia y celebrar cada logro, por pequeño que parezca.
-            </p>
+              Hoy se ha convertido en una plataforma integral que conecta corazones, conocimientos y experiencias. En Aura, creemos que cada familia merece sentirse acompañada, cada niño merece ser visto desde su potencial, y cada paso merece ser celebrado.  </p>
             <p>
-              Hoy, Aura es más que una plataforma. Es una comunidad vibrante donde familias comparten sus historias,
-              profesionales colaboran para ofrecer el mejor cuidado posible, y juntos trabajamos por una sociedad más
-              inclusiva y comprensiva.
+              Más que una plataforma, Aura es una comunidad viva que une ciencia, amor y propósito. Juntos, padres y profesionales construimos un camino de aprendizaje compartido hacia una sociedad más consciente, empática e inclusiva
             </p>
           </div>
         </div>

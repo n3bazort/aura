@@ -1,10 +1,12 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Phone, Mail, Globe, MapPin, Filter } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Phone, Mail, Globe, MapPin, Filter, ChevronRight, Search } from "lucide-react"
+import { professionalsData } from "@/lib/professionals-data"
 
 const specialties = [
   "Todos",
@@ -17,393 +19,84 @@ const specialties = [
   "Psiquiatría",
 ]
 
-
-/* const professionals = [
-  {
-    id: 1,
-    name: "Dr. Juan Pérez",
-    specialty: "Psicología Infantil",
-    location: "Quito",
-    phone: "+593 99 123 4567",
-    email: "juan.perez@aura.com",
-    website: "www.drjuanperez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 12,
-  },
-  {
-    id: 2,
-    name: "Dra. María González",
-    specialty: "Terapia Ocupacional",
-    location: "Guayaquil",
-    phone: "+593 99 234 5678",
-    email: "maria.gonzalez@aura.com",
-    website: "www.mariagonzalez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 8,
-  },
-  {
-    id: 3,
-    name: "Lic. Carlos Mendoza",
-    specialty: "Educación Especial",
-    location: "Manabí",
-    phone: "+593 99 345 6789",
-    email: "carlos.mendoza@aura.com",
-    website: "www.carlosmendoza.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 15,
-  },
-  {
-    id: 4,
-    name: "Dra. Ana Rodríguez",
-    specialty: "Odontología",
-    location: "Quito",
-    phone: "+593 99 456 7890",
-    email: "ana.rodriguez@aura.com",
-    website: "www.anarodriguez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 10,
-  },
-  {
-    id: 5,
-    name: "Lic. Pedro Sánchez",
-    specialty: "Fonoaudiología",
-    location: "Guayaquil",
-    phone: "+593 99 567 8901",
-    email: "pedro.sanchez@aura.com",
-    website: "www.pedrosanchez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 7,
-  },
-  {
-    id: 6,
-    name: "Dr. Luis Martínez",
-    specialty: "Neurología",
-    location: "Quito",
-    phone: "+593 99 678 9012",
-    email: "luis.martinez@aura.com",
-    website: "www.luismartinez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 20,
-  },
-  {
-    id: 7,
-    name: "Dra. Carmen Torres",
-    specialty: "Psiquiatría",
-    location: "Manabí",
-    phone: "+593 99 789 0123",
-    email: "carmen.torres@aura.com",
-    website: "www.carmentorres.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 14,
-  },
-  {
-    id: 8,
-    name: "Lic. Roberto Flores",
-    specialty: "Psicología Infantil",
-    location: "Guayaquil",
-    phone: "+593 99 890 1234",
-    email: "roberto.flores@aura.com",
-    website: "www.robertoflores.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 9,
-  },
-  {
-    id: 9,
-    name: "Dra. Isabel Ramírez",
-    specialty: "Terapia Ocupacional",
-    location: "Quito",
-    phone: "+593 99 901 2345",
-    email: "isabel.ramirez@aura.com",
-    website: "www.isabelramirez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 11,
-  },
-  {
-    id: 10,
-    name: "Dr. Fernando Castro",
-    specialty: "Educación Especial",
-    location: "Manabí",
-    phone: "+593 99 012 3456",
-    email: "fernando.castro@aura.com",
-    website: "www.fernandocastro.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 13,
-  },
-  {
-    id: 11,
-    name: "Dra. Patricia Morales",
-    specialty: "Odontología",
-    location: "Guayaquil",
-    phone: "+593 99 123 4568",
-    email: "patricia.morales@aura.com",
-    website: "www.patriciamorales.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 6,
-  },
-  {
-    id: 12,
-    name: "Lic. Diego Vargas",
-    specialty: "Fonoaudiología",
-    location: "Quito",
-    phone: "+593 99 234 5679",
-    email: "diego.vargas@aura.com",
-    website: "www.diegovargas.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 8,
-  },
-  {
-    id: 13,
-    name: "Dr. Andrés Herrera",
-    specialty: "Neurología",
-    location: "Manabí",
-    phone: "+593 99 345 6780",
-    email: "andres.herrera@aura.com",
-    website: "www.andresherrera.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 18,
-  },
-  {
-    id: 14,
-    name: "Dra. Sofía Jiménez",
-    specialty: "Psiquiatría",
-    location: "Guayaquil",
-    phone: "+593 99 456 7891",
-    email: "sofia.jimenez@aura.com",
-    website: "www.sofiajimenez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 16,
-  },
-  {
-    id: 15,
-    name: "Lic. Miguel Ortiz",
-    specialty: "Psicología Infantil",
-    location: "Quito",
-    phone: "+593 99 567 8902",
-    email: "miguel.ortiz@aura.com",
-    website: "www.miguelortiz.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 5,
-  },
-] */
-
-const professionals = [
-  {
-    id: 1,
-    name: "Dr. Juan Pérez",
-    specialty: "Psicología Infantil",
-    location: "Quito",
-    phone: "+593 99 123 4567",
-    email: "juan.perez@aura.com",
-    website: "www.drjuanperez.com",
-    // Imagen local: 1.png
-    image: "1.png", 
-    experience: 12,
-  },
-  {
-    id: 2,
-    name: "Dra. María González",
-    specialty: "Terapia Ocupacional",
-    location: "Guayaquil",
-    phone: "+593 99 234 5678",
-    email: "maria.gonzalez@aura.com",
-    website: "www.mariagonzalez.com",
-    // Imagen local: 2.png
-    image: "2.png",
-    experience: 8,
-  },
-  {
-    id: 3,
-    name: "Lic. Carlos Mendoza",
-    specialty: "Educación Especial",
-    location: "Manabí",
-    phone: "+593 99 345 6789",
-    email: "carlos.mendoza@aura.com",
-    website: "www.carlosmendoza.com",
-    // Imagen local: 3.png
-    image: "3.png",
-    experience: 15,
-  },
-  {
-    id: 4,
-    name: "Dra. Ana Rodríguez",
-    specialty: "Odontología",
-    location: "Quito",
-    phone: "+593 99 456 7890",
-    email: "ana.rodriguez@aura.com",
-    website: "www.anarodriguez.com",
-    // Imagen local: 4.png
-    image: "4.png",
-    experience: 10,
-  },
-  {
-    id: 5,
-    name: "Lic. Pedro Sánchez",
-    specialty: "Fonoaudiología",
-    location: "Guayaquil",
-    phone: "+593 99 567 8901",
-    email: "pedro.sanchez@aura.com",
-    website: "www.pedrosanchez.com",
-    // Imagen local: 5.png
-    image: "5.png",
-    experience: 7,
-  },
-  {
-    id: 6,
-    name: "Dr. Luis Martínez",
-    specialty: "Neurología",
-    location: "Quito",
-    phone: "+593 99 678 9012",
-    email: "luis.martinez@aura.com",
-    website: "www.luismartinez.com",
-    // Imagen local: 6.png
-    image: "6.png",
-    experience: 20,
-  },
-  {
-    id: 7,
-    name: "Dra. Carmen Torres",
-    specialty: "Psiquiatría",
-    location: "Manabí",
-    phone: "+593 99 789 0123",
-    email: "carmen.torres@aura.com",
-    website: "www.carmentorres.com",
-    // Imagen local: 7.png
-    image: "7.png",
-    experience: 14,
-  },
-  {
-    id: 8,
-    name: "Lic. Roberto Flores",
-    specialty: "Psicología Infantil",
-    location: "Guayaquil",
-    phone: "+593 99 890 1234",
-    email: "roberto.flores@aura.com",
-    website: "www.robertoflores.com",
-    // Imagen local: 8.png
-    image: "8.png",
-    experience: 9,
-  },
-  {
-    id: 9,
-    name: "Dra. Isabel Ramírez",
-    specialty: "Terapia Ocupacional",
-    location: "Quito",
-    phone: "+593 99 901 2345",
-    email: "isabel.ramirez@aura.com",
-    website: "www.isabelramirez.com",
-    // Imagen local: 9.png
-    image: "9.png",
-    experience: 11,
-  },
-  {
-    id: 10,
-    name: "Dr. Fernando Castro",
-    specialty: "Educación Especial",
-    location: "Manabí",
-    phone: "+593 99 012 3456",
-    email: "fernando.castro@aura.com",
-    website: "www.fernandocastro.com",
-    // Imagen local: 10.png
-    image: "10.png",
-    experience: 13,
-  },
-  {
-    id: 11,
-    name: "Dra. Patricia Morales",
-    specialty: "Odontología",
-    location: "Guayaquil",
-    phone: "+593 99 123 4568",
-    email: "patricia.morales@aura.com",
-    website: "www.patriciamorales.com",
-    // Imagen local: 11.png
-    image: "11.png",
-    experience: 6,
-  },
-  {
-    id: 12,
-    name: "Lic. Diego Vargas",
-    specialty: "Fonoaudiología",
-    location: "Quito",
-    phone: "+593 99 234 5679",
-    email: "diego.vargas@aura.com",
-    website: "www.diegovargas.com",
-    // Imagen local: 12.png
-    image: "12.png",
-    experience: 8,
-  },
-  {
-    id: 13,
-    name: "Dr. Andrés Herrera",
-    specialty: "Neurología",
-    location: "Manabí",
-    phone: "+593 99 345 6780",
-    email: "andres.herrera@aura.com",
-    website: "www.andresherrera.com",
-    // Imagen local: 13.png
-    image: "13.png",
-    experience: 18,
-  },
-  {
-    id: 14,
-    name: "Dra. Sofía Jiménez",
-    specialty: "Psiquiatría",
-    location: "Guayaquil",
-    phone: "+593 99 456 7891",
-    email: "sofia.jimenez@aura.com",
-    website: "www.sofiajimenez.com",
-    // Imagen local: 14.png
-    image: "14.png",
-    experience: 16,
-  },
-  {
-    id: 15,
-    name: "Lic. Miguel Ortiz",
-    specialty: "Psicología Infantil",
-    location: "Quito",
-    phone: "+593 99 567 8902",
-    email: "miguel.ortiz@aura.com",
-    website: "www.miguelortiz.com",
-    // Imagen local: 15.png
-    image: "15.png",
-    experience: 5,
-  },
-];
-
 export function ProfessionalsDirectory() {
   const [selectedSpecialty, setSelectedSpecialty] = useState("Todos")
+  const [searchQuery, setSearchQuery] = useState("")
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
-  const filteredProfessionals =
-    selectedSpecialty === "Todos" ? professionals : professionals.filter((prof) => prof.specialty === selectedSpecialty)
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 200, behavior: "smooth" })
+    }
+  }
+
+  const filteredProfessionals = professionalsData.filter((prof) => {
+    const matchesSpecialty = selectedSpecialty === "Todos" || prof.specialty === selectedSpecialty
+    const matchesSearch = 
+      prof.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      prof.specialty.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      prof.location.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchesSpecialty && matchesSearch
+  })
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-     
-      {/* Filter Section */}
-      <section className="px2 bg-card border-b border-border sticky top-16 z-30 py-0 my-0">
-        <div className="max-w-7xl mx-auto">
+      {/* Filter Section - Sin márgenes laterales, con padding responsive superior e inferior */}
+      <section className="bg-card border-b border-border sticky top-16 z-30 py-4 sm:py-6 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-3 mb-4">
             <Filter className="h-5 w-5 text-primary" />
             <h2 className="text-lg font-semibold text-foreground">Filtrar por especialidad</h2>
           </div>
-          <div className="flex flex-wrap gap-2 flex-row items-stretch justify-center">
-            {specialties.map((specialty) => (
-              <Button
-                key={specialty}
-                variant={selectedSpecialty === specialty ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedSpecialty(specialty)}
-                className="rounded-full"
-              >
-                {specialty}
-              </Button>
-            ))}
+
+          {/* Barra de búsqueda */}
+          <div className="mb-4 relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              type="text"
+              placeholder="Buscar por nombre, especialidad o ubicación..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10 rounded-xl"
+            />
+          </div>
+
+          {/* Categorías con scroll horizontal */}
+          <div className="relative">
+            <div 
+              ref={scrollContainerRef}
+              className="flex gap-2 overflow-x-auto scrollbar-hide scroll-smooth pb-2"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {specialties.map((specialty) => (
+                <Button
+                  key={specialty}
+                  variant={selectedSpecialty === specialty ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedSpecialty(specialty)}
+                  className="rounded-full whitespace-nowrap flex-shrink-0"
+                >
+                  {specialty}
+                </Button>
+              ))}
+            </div>
+            
+            {/* Botón de flecha indicadora */}
+            <button
+              onClick={scrollRight}
+              className="absolute right-0 top-0 bottom-2 bg-gradient-to-l from-card via-card to-transparent pl-8 pr-2 flex items-center"
+              aria-label="Ver más categorías"
+            >
+              <div className="bg-primary/10 hover:bg-primary/20 rounded-full p-1.5 transition-colors">
+                <ChevronRight className="h-4 w-4 text-primary" />
+              </div>
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Professionals Grid */}
-      <section className="py-12 px-6">
+      {/* MARGEN LATERAL 10% - Professionals Grid */}
+      <section className="py-12 px-[10%]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProfessionals.map((prof) => (
@@ -413,7 +106,7 @@ export function ProfessionalsDirectory() {
               >
                 <div className="aspect-square overflow-hidden bg-muted">
                   <img
-                    src={prof.image || "/placeholder.svg"}
+                    src={prof.image || "/4.png"}
                     alt={prof.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
@@ -458,6 +151,12 @@ export function ProfessionalsDirectory() {
               </Card>
             ))}
           </div>
+
+          {filteredProfessionals.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground text-lg">No se encontraron profesionales que coincidan con tu búsqueda</p>
+            </div>
+          )}
         </div>
       </section>
     </div>

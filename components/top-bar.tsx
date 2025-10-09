@@ -92,7 +92,7 @@ export function TopBar() {
                 <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-950/20 dark:to-amber-900/20 p-6 rounded-2xl border-2 border-amber-400">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <h4 className="text-2xl font-bold text-foreground">Plan Aura Anual</h4>
+                      <h4 className="text-2xl font-bold text-foreground">Plan Aura </h4>
                       <p className="text-sm text-muted-foreground">Ahorra 40% vs. plan mensual</p>
                     </div>
                     <Badge className="bg-amber-500 text-amber-950">Más Popular</Badge>

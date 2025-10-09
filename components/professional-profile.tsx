@@ -6,49 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { ArrowLeft, Phone, Mail, Globe, MapPin, Award, Briefcase, Calendar, CheckCircle2, Loader2 } from "lucide-react"
-
-const professionalsData: Record<string, any> = {
-  "1": {
-    name: "Dr. Juan Pérez",
-    specialty: "Psicología Infantil",
-    location: "Quito, Ecuador",
-    phone: "+593 99 123 4567",
-    email: "juan.perez@aura.com",
-    website: "www.drjuanperez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 12,
-    bio: "Especialista en desarrollo infantil y trastornos del espectro autista con más de una década de experiencia. Comprometido con el bienestar emocional y cognitivo de cada niño.",
-    achievements: [
-      "Certificación Internacional en Terapia ABA",
-      "Máster en Neuropsicología Infantil - Universidad Central",
-      "Miembro activo de la Asociación Ecuatoriana de Autismo",
-      "Publicaciones en revistas científicas internacionales",
-    ],
-    photos: ["/dr-juan-working-1.jpg", "/dr-juan-working-2.jpg", "/dr-juan-working-3.jpg"],
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7937094474845!2d-78.48785492426895!3d-0.18004099984238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f0f6d3c!2sQuito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus",
-  },
-  "2": {
-    name: "Dra. María González",
-    specialty: "Terapia Ocupacional",
-    location: "Guayaquil, Ecuador",
-    phone: "+593 99 234 5678",
-    email: "maria.gonzalez@aura.com",
-    website: "www.mariagonzalez.com",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: 8,
-    bio: "Terapeuta ocupacional especializada en integración sensorial y desarrollo de habilidades motoras finas en niños con TEA.",
-    achievements: [
-      "Certificación en Integración Sensorial de Ayres",
-      "Especialización en Terapia Ocupacional Pediátrica",
-      "Formación en Método DIR/Floortime",
-      "Colaboradora en programas de inclusión escolar",
-    ],
-    photos: ["/dra-maria-working-1.jpg", "/dra-maria-working-2.jpg", "/dra-maria-working-3.jpg"],
-    mapUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0!2d-79.88!3d-2.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTEnMjQuMCJTIDc5wrA1Mic0OC4wIlc!5e0!3m2!1sen!2sec!4v1234567890123!5m2!1sen!2sec",
-  },
-}
+import { getProfessionalById } from "@/lib/professionals-data"
 
 export function ProfessionalProfile({ professionalId }: { professionalId: string }) {
   const router = useRouter()
@@ -56,7 +14,11 @@ export function ProfessionalProfile({ professionalId }: { professionalId: string
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
-  const professional = professionalsData[professionalId] || professionalsData["1"]
+  const professional = getProfessionalById(professionalId) || getProfessionalById(1)
+
+  if (!professional) {
+    return <div>Profesional no encontrado</div>
+  }
 
   const handleReservation = () => {
     setIsLoading(true)
