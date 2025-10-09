@@ -6,36 +6,52 @@ import Link from "next/link"
 
 const events = [
   {
+    id: 1,
     date: "2025-10-10",
     title: "Charla: Neurodiversidad en el aula",
     speaker: "Dra. Ana Pérez",
     time: "18:00 - 20:00",
     type: "Charla",
-    image: "/event-neurodiversity.jpg",
+    location: "Centro Comunitario Quito",
+    description:
+      "Exploraremos estrategias para crear ambientes educativos inclusivos que celebren la neurodiversidad y apoyen el aprendizaje de todos los estudiantes.",
+    image: "/eventos/1.png",
   },
   {
+    id: 2,
     date: "2025-10-15",
     title: "Taller: Comunicación positiva",
     speaker: "Lic. Marta Gómez",
     time: "16:00 - 18:30",
     type: "Taller",
-    image: "/event-communication.jpg",
+    location: "Sala Virtual Zoom",
+    description:
+      "Aprende técnicas de comunicación efectiva y positiva para fortalecer la relación con tu hijo y fomentar su desarrollo emocional.",
+    image: "/eventos/2.png",
   },
   {
+    id: 3,
     date: "2025-10-25",
     title: "Conferencia: Avances científicos sobre TEA",
     speaker: "Dr. Luis Herrera",
     time: "19:00 - 21:00",
     type: "Conferencia",
-    image: "/event-science.jpg",
+    location: "Auditorio Universidad Central",
+    description:
+      "Presentación de las últimas investigaciones y avances científicos en el entendimiento y tratamiento del Trastorno del Espectro Autista.",
+    image: "/eventos/3.png",
   },
   {
+    id: 4,
     date: "2025-11-05",
     title: "Webinar: Estrategias sensoriales en casa",
     speaker: "Lic. Patricia Ruiz",
     time: "17:00 - 18:30",
     type: "Webinar",
-    image: "/event-sensory.jpg",
+    location: "Online",
+    description:
+      "Descubre actividades y estrategias sensoriales que puedes implementar en casa para apoyar el desarrollo de tu hijo.",
+    image: "/eventos/4.png",
   },
 ]
 

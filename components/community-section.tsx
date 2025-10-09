@@ -12,32 +12,32 @@ const stories = [
   {
     author: "María López",
     initials: "ML",
-    text: "Hoy mi hijo me miró a los ojos por primera vez. Lloré de emoción. ❤️",
+    text: "¡Hoy mi hijo me miró a los ojos por primera vez! 👀 Después de meses de terapia, finalmente hicimos contacto visual. Es un momento que voy a atesorar para siempre. Gracias a todo el equipo de AURA por su apoyo incondicional. 💙",
     likes: 238,
     comments: [
       { author: "José", text: "¡Qué hermoso momento!" },
       { author: "Carla", text: "Gracias por compartir, me llenó el alma." },
     ],
-    image: "/ninohome.png",
-  },
-  {
-    author: "Andrés Ramírez",
-    initials: "AR",
-    text: "A mi hijo le encanta armar rompecabezas complejos, tiene una mente brillante.",
-    likes: 150,
-    comments: [{ author: "Lucía", text: "Qué orgullo, cada niño tiene su luz 💙" }],
-    image: "/child-solving-complex-puzzle.jpg",
+    image: "/comunidad/retrato-de-un-nino-sonriente.jpg",
   },
   {
     author: "Carmen Silva",
     initials: "CS",
-    text: "Después de meses de terapia, hoy dijo su primera palabra completa. No hay palabras para describir esta alegría.",
+    text: "¡Mi hija dijo 'mamá' por primera vez! 😭❤️ Después de dos años de terapia del lenguaje, escuchar su voz llamándome es el mejor regalo. Nunca pierdan la esperanza, cada niño tiene su propio tiempo.",
     likes: 312,
     comments: [
       { author: "Pedro", text: "¡Felicidades! Cada logro es un tesoro." },
-      { author: "Ana", text: "Hermoso testimonio 💜" },
+      { author: "Ana", text: "Hermoso testimonio �" },
     ],
-    image: "/child-speaking-with-therapist.jpg",
+    image: "/comunidad/madre sujetando a su niño con autismo.png",
+  },
+  {
+    author: "José Martínez",
+    initials: "JM",
+    text: "¡Victoria! 🎉 Mi hijo completó su primer rompecabezas de 500 piezas completamente solo. Su concentración y determinación me sorprenden cada día. Estos logros nos recuerdan que cada pequeño paso es un gran avance. 🧩",
+    likes: 156,
+    comments: [{ author: "Lucía", text: "Qué orgullo, cada niño tiene su luz �" }],
+    image: "/comunidad/primer-plano-de-un-chico-lindo-mirando-hacia-otro-lado.jpg",
   },
 ]
 
