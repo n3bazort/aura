@@ -266,7 +266,7 @@ export function WorkshopDetail({ workshopId }: { workshopId: string }) {
     <div className="min-h-screen bg-background">
       {/* Back Button */}
       <div className="bg-card border-b border-[color:var(--border)] py-4 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <Button variant="ghost" onClick={() => router.back()} className="gap-2">
             <ArrowLeft className="h-4 w-4" />
             Volver a Talleres
@@ -276,7 +276,7 @@ export function WorkshopDetail({ workshopId }: { workshopId: string }) {
 
       {/* Workshop Header */}
       <section className="py-12 px-6 bg-gradient-to-br from-primary/10 via-background to-accent/10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Workshop Image */}
             <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl">
@@ -323,7 +323,7 @@ export function WorkshopDetail({ workshopId }: { workshopId: string }) {
 
       {/* Objectives */}
       <section className="py-12 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <Card className="p-8">
             <h2 className="text-2xl font-bold text-foreground mb-6">Objetivos del Taller</h2>
             <ul className="space-y-3">
@@ -340,7 +340,7 @@ export function WorkshopDetail({ workshopId }: { workshopId: string }) {
 
       {/* Content */}
       <section className="py-12 px-6 bg-primary/5">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <h2 className="text-2xl font-bold text-foreground mb-6">Contenido del Taller</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {workshop.content.map((item: any, index: number) => (
@@ -364,7 +364,7 @@ export function WorkshopDetail({ workshopId }: { workshopId: string }) {
 
       {/* Resources */}
       <section className="py-12 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-[10%]">
           <h2 className="text-2xl font-bold text-foreground mb-6">Recursos Descargables</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {workshop.resources.map((resource: any, index: number) => (

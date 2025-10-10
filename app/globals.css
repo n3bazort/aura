@@ -307,4 +307,69 @@ body {
   #team-carousel {
     scroll-behavior: smooth;
   }
+
+  /* Animación de borde brillante para botón VIP */
+  @keyframes vip-border-glow {
+    0% {
+      box-shadow: 
+        0 0 10px rgba(104, 255, 142, 0.6),
+        0 0 20px rgba(104, 255, 142, 0.4),
+        inset 0 0 10px rgba(104, 255, 142, 0.2);
+    }
+    50% {
+      box-shadow: 
+        0 0 20px rgba(104, 255, 142, 0.8),
+        0 0 40px rgba(104, 255, 142, 0.6),
+        inset 0 0 15px rgba(104, 255, 142, 0.4);
+    }
+    100% {
+      box-shadow: 
+        0 0 10px rgba(104, 255, 142, 0.6),
+        0 0 20px rgba(104, 255, 142, 0.4),
+        inset 0 0 10px rgba(104, 255, 142, 0.2);
+    }
+  }
+
+  @keyframes vip-border-shine {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .vip-button-glow {
+    position: relative;
+    animation: vip-border-glow 2s ease-in-out infinite;
+    overflow: hidden;
+  }
+
+  .vip-button-glow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: vip-border-shine 3s linear infinite;
+    border-radius: 0.75rem;
+    z-index: -1;
+  }
+
+  .vip-button-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #68ff8e, #3dd46f);
+    border-radius: 0.75rem;
+    z-index: -1;
+  }
 }

@@ -46,7 +46,7 @@ export function TopBar() {
           <Dialog>
             <DialogTrigger asChild>
               <Button
-                className="font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="vip-button-glow font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all relative"
                 style={{
                   background: 'linear-gradient(to right, #68ff8e, #3dd46f)',
                   color: '#0a3d1f'
