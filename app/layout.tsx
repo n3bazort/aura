@@ -24,6 +24,11 @@ export const metadata: Metadata = {
   description:
     "Plataforma para madres, padres y cuidadores de niños con autismo. Encuentra información confiable, formación y comunidad.",
   generator: "v0.app",
+  icons: {
+    icon: '/logoo.png',
+    shortcut: '/logoo.png',
+    apple: '/logoo.png',
+  },
 }
 
 export default function RootLayout({
