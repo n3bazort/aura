@@ -61,16 +61,16 @@ export function ProfessionalsSection() {
   }, [])
 
   return (
-    <section id="profesionales" className="py-24 px-6 bg-background">
+    <section id="profesionales" className="py-16 md:py-24 px-4 sm:px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div ref={titleRef} className={`text-center mb-16 space-y-4 scroll-animate ${titleVisible ? "visible" : ""}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Red de Profesionales</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Red de Profesionales</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Conecta con especialistas certificados que entienden las necesidades únicas de tu familia
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {professionals.map((prof, index) => {
             const categoryProfs = getProfessionalsByCategory(prof.category)
             const currentProf = categoryProfs[currentIndices[index]] || categoryProfs[0]
@@ -89,7 +89,7 @@ export function ProfessionalsSection() {
                     <img
                       src={currentProf?.image || "/placeholder.svg"}
                       alt={currentProf?.name || prof.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                      className="w-full h-full object-contain md:object-cover p-2 md:p-0 group-hover:scale-110 transition-all duration-500"
                     />
                     {/* Nombre del profesional mostrado */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
@@ -97,8 +97,8 @@ export function ProfessionalsSection() {
                       <p className="text-white/80 text-xs">{currentProf?.specialty}</p>
                     </div>
                   </div>
-                  <div className="p-6 space-y-3">
-                    <h3 className="text-lg font-bold text-foreground">{prof.title}</h3>
+                  <div className="p-5 sm:p-6 space-y-3">
+                    <h3 className="text-base sm:text-lg font-bold text-foreground">{prof.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{prof.description}</p>
                     <Link href="/profesionales">
                       <Button variant="ghost" size="sm" className="group/btn -ml-2">
@@ -113,7 +113,7 @@ export function ProfessionalsSection() {
           })}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-10 md:mt-12">
           <Link href="/profesionales">
             <Button size="lg" className="rounded-2xl px-8">
               Explorar Todos los Profesionales

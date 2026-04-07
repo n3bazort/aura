@@ -18,7 +18,7 @@ export default function Home() {
       <SidebarNav />
 
       {/* MÁRGENES LATERALES: Ajusta el valor px-[14%] según necesites para pruebas */}
-      <main className="md:ml-20 pt-16 px-[14%]">
+      <main className="md:ml-20 pt-16 px-4 sm:px-6 md:px-[14%]">
         <HeroSection />
         
         {/* Banner publicitario #1 */}

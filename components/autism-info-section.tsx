@@ -83,27 +83,27 @@ export function AutismInfoSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 bg-background">
+    <section ref={sectionRef} className="py-16 md:py-20 px-4 sm:px-6 bg-background">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground">
             Entendiendo el <span className="text-primary">Autismo</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Información importante basada en evidencia científica para familias y cuidadores
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
               <div
                 key={index}
                 data-card-index={index}
-                className={`bg-card border border-[color:var(--border)] rounded-2xl p-6 shadow-lg transition-all duration-700 ${
+                className={`bg-card border border-[color:var(--border)] rounded-2xl p-5 sm:p-6 shadow-lg transition-all duration-700 ${
                   visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
@@ -111,9 +111,9 @@ export function AutismInfoSection() {
                   <div className="p-3 bg-primary/10 rounded-xl">
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
-                  <div className="text-3xl font-bold text-primary">{stat.value}</div>
-                  <div className="font-semibold text-foreground">{stat.label}</div>
-                  <div className="text-sm text-muted-foreground">{stat.description}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-primary">{stat.value}</div>
+                  <div className="font-semibold text-foreground text-sm sm:text-base">{stat.label}</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">{stat.description}</div>
                 </div>
               </div>
             )
@@ -129,17 +129,17 @@ export function AutismInfoSection() {
               <div
                 key={index}
                 data-card-index={cardIndex}
-                className={`bg-card border border-[color:var(--border)] rounded-2xl p-8 shadow-lg transition-all duration-700 delay-${index * 100} ${
+                className={`bg-card border border-[color:var(--border)] rounded-2xl p-6 sm:p-8 shadow-lg transition-all duration-700 delay-${index * 100} ${
                   visibleCards.includes(cardIndex) ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                 }`}
               >
-                <div className="flex items-start gap-6">
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                   <div className={`p-4 bg-gradient-to-br ${fact.color} rounded-xl flex-shrink-0`}>
                     <Icon className="h-8 w-8 text-white" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-foreground">{fact.title}</h3>
-                    <p className="text-lg text-muted-foreground leading-relaxed">{fact.description}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground">{fact.title}</h3>
+                    <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">{fact.description}</p>
                   </div>
                 </div>
               </div>

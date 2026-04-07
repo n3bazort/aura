@@ -5,14 +5,22 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from "
 interface User {
   name: string
   email: string
+  isGuest?: boolean
 }
 
 interface AuthContextType {
   user: User | null
   login: (email: string, password: string) => Promise<boolean>
   register: (name: string, email: string, password: string) => Promise<boolean>
+  continueAsGuest: () => void
   logout: () => void
   isLoading: boolean
+}
+
+const GUEST_USER: User = {
+  name: "Invitado",
+  email: "guest@aura.local",
+  isGuest: true,
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -69,12 +77,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return true
   }
 
+  const continueAsGuest = () => {
+    setUser(GUEST_USER)
+    localStorage.setItem("aura_user", JSON.stringify(GUEST_USER))
+  }
+
   const logout = () => {
     setUser(null)
     localStorage.removeItem("aura_user")
   }
 
-  return <AuthContext.Provider value={{ user, login, register, logout, isLoading }}>{children}</AuthContext.Provider>
+  return (
+    <AuthContext.Provider value={{ user, login, register, continueAsGuest, logout, isLoading }}>
+      {children}
+    </AuthContext.Provider>
+  )
 }
 
 export function useAuth() {

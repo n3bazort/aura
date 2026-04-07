@@ -66,32 +66,32 @@ function formatDate(dateString: string) {
 
 export function EventsSection() {
   return (
-    <section id="eventos" className="py-24 px-6 bg-card">
+    <section id="eventos" className="py-16 md:py-24 px-4 sm:px-6 bg-card">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Calendario de Eventos</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Calendario de Eventos</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Participa en charlas, talleres y conferencias con expertos en autismo
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {events.map((event, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-video relative overflow-hidden">
-                <img src={event.image || "/placeholder.svg"} alt={event.title} className="w-full h-full object-cover" />
+              <div className="aspect-[4/3] md:aspect-video relative overflow-hidden bg-muted">
+                <img src={event.image || "/placeholder.svg"} alt={event.title} className="w-full h-full object-contain md:object-cover p-2 md:p-0" />
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-primary text-primary-foreground">{event.type}</Badge>
                 </div>
               </div>
 
-              <div className="p-6 space-y-4">
+              <div className="p-5 sm:p-6 space-y-4">
                 {/* Header */}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{event.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">{event.title}</h3>
                 </div>
 
                 {/* Details */}

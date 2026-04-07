@@ -29,8 +29,8 @@ export function AdBanner({ className = "", size = "horizontal" }: AdBannerProps)
   // horizontal: 728x90 (leaderboard estándar)
   // square: 300x250 (medium rectangle estándar)
   const sizeClasses = size === "horizontal" 
-    ? "w-full max-w-[728px] h-[90px]" 
-    : "w-[300px] h-[250px]"
+    ? "w-full max-w-[728px] h-[72px] sm:h-[90px]" 
+    : "w-full max-w-[300px] h-[200px] sm:h-[250px]"
   
   return (
     <div className={`flex items-center justify-center ${className}`}>
@@ -38,7 +38,7 @@ export function AdBanner({ className = "", size = "horizontal" }: AdBannerProps)
         <img
           src={`/banners/${currentBanner}.jpg`}
           alt={`Anuncio ${currentBanner}`}
-          className="w-full h-full object-cover transition-opacity duration-500"
+          className="w-full h-full object-contain sm:object-cover p-1 sm:p-0 transition-opacity duration-500"
           onError={(e) => {
             // Fallback si la imagen no existe
             const target = e.target as HTMLImageElement

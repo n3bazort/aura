@@ -36,16 +36,16 @@ export function WorkshopsSection() {
   const { refs: workshopRefs, visibilities: workshopVisibilities } = useScrollAnimations(workshops.length)
 
   return (
-    <section id="talleres" className="py-24 px-6 bg-muted/30">
+    <section id="talleres" className="py-16 md:py-24 px-4 sm:px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div ref={titleRef} className={`text-center mb-16 space-y-4 scroll-animate ${titleVisible ? "visible" : ""}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Talleres y Capacitación</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Talleres y Capacitación</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Formación dictada por profesionales especializados. Paga por taller o accede con suscripción premium.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {workshops.map((workshop, index) => (
             <div
               key={workshop.title}
@@ -56,16 +56,16 @@ export function WorkshopsSection() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group h-full">
-                <div className="aspect-video overflow-hidden bg-muted">
+                <div className="aspect-[4/3] md:aspect-video overflow-hidden bg-muted">
                   <img
                     src={workshop.image || "/placeholder.svg"}
                     alt={workshop.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain md:object-cover p-2 md:p-0 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6 space-y-4">
+                <div className="p-5 sm:p-6 space-y-4">
                   <div className="flex items-start justify-between gap-2">
-                    <h3 className="text-xl font-bold text-foreground flex-1">{workshop.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground flex-1">{workshop.title}</h3>
                     <Badge variant="secondary" className="text-lg font-bold">
                       {workshop.price}
                     </Badge>

@@ -72,16 +72,16 @@ export function CommunitySection() {
   }
 
   return (
-    <section id="comunidad" className="py-24 px-6 bg-background">
+    <section id="comunidad" className="py-16 md:py-24 px-4 sm:px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div ref={titleRef} className={`text-center mb-16 space-y-4 scroll-animate ${titleVisible ? "visible" : ""}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Historias de la Comunidad</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Historias de la Comunidad</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Celebramos cada logro, cada sonrisa, cada paso adelante
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {stories.map((story, index) => (
             <div
               key={index}
@@ -93,16 +93,16 @@ export function CommunitySection() {
             >
               <Card className="overflow-hidden hover:shadow-xl transition-shadow h-full">
                 {/* Image */}
-                <div className="aspect-square overflow-hidden bg-muted">
+                <div className="aspect-[4/3] md:aspect-square overflow-hidden bg-muted">
                   <img
                     src={story.image || "/placeholder.svg"}
                     alt={`Historia de ${story.author}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain md:object-cover p-2 md:p-0"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
+                <div className="p-5 sm:p-6 space-y-4">
                   {/* Author */}
                   <div className="flex items-center gap-3">
                     <Avatar>
@@ -112,7 +112,7 @@ export function CommunitySection() {
                   </div>
 
                   {/* Text */}
-                  <p className="text-foreground leading-relaxed">{story.text}</p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">{story.text}</p>
 
                   {/* Actions */}
                   <div className="flex items-center gap-4 pt-2">
@@ -132,7 +132,7 @@ export function CommunitySection() {
                       {story.comments.map((comment, commentIndex) => (
                         <div key={commentIndex} className="space-y-1">
                           <span className="font-semibold text-sm text-foreground">{comment.author}</span>
-                          <p className="text-sm text-muted-foreground">{comment.text}</p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">{comment.text}</p>
                         </div>
                       ))}
                     </div>

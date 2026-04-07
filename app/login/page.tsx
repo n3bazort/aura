@@ -13,7 +13,7 @@ import { ArrowLeft, Loader2 } from "lucide-react"
 
 export default function LoginPage() {
   const router = useRouter()
-  const { login } = useAuth()
+  const { login, continueAsGuest } = useAuth()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
@@ -37,24 +37,29 @@ export default function LoginPage() {
     }
   }
 
+  const handleGuestAccess = () => {
+    continueAsGuest()
+    router.push("/")
+  }
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5 px-3 sm:px-4 py-4 sm:py-8">
       <div className="w-full max-w-md">
         {/* Back button */}
-        <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8">
+        <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 sm:mb-8 text-sm sm:text-base">
           <ArrowLeft className="h-4 w-4" />
           Volver al inicio
         </Link>
 
         {/* Login Card */}
-        <div className="bg-card border border-[color:var(--border)] rounded-3xl shadow-2xl p-8 space-y-6">
+        <div className="bg-card border border-[color:var(--border)] rounded-3xl shadow-2xl p-5 sm:p-8 space-y-5 sm:space-y-6">
           {/* Header */}
           <div className="text-center space-y-2">
-            <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-4">
-              <span className="text-primary-foreground font-bold text-3xl">A</span>
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-primary-foreground font-bold text-2xl sm:text-3xl">A</span>
             </div>
-            <h1 className="text-3xl font-bold text-foreground">Bienvenido a Aura</h1>
-            <p className="text-muted-foreground">Inicia sesión para continuar</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Bienvenido a Aura</h1>
+            <p className="text-sm sm:text-base text-muted-foreground">Inicia sesión o entra como invitado para ver la demo completa</p>
           </div>
 
           {/* Form */}
@@ -87,7 +92,7 @@ export default function LoginPage() {
 
             {error && <p className="text-sm text-red-600 text-center">{error}</p>}
 
-            <Button type="submit" className="w-full rounded-xl py-6 text-lg" disabled={loading}>
+            <Button type="submit" className="w-full rounded-xl py-5 sm:py-6 text-base sm:text-lg" disabled={loading}>
               {loading ? (
                 <>
                   <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -98,6 +103,15 @@ export default function LoginPage() {
               )}
             </Button>
           </form>
+
+          <Button
+            type="button"
+            variant="secondary"
+            className="w-full rounded-xl py-5 sm:py-6 text-base sm:text-lg"
+            onClick={handleGuestAccess}
+          >
+            Entrar como invitado
+          </Button>
 
           {/* Divider */}
           <div className="relative">
@@ -111,7 +125,7 @@ export default function LoginPage() {
 
           {/* Register Link */}
           <Link href="/registro">
-            <Button variant="outline" className="w-full rounded-xl py-6 text-lg bg-transparent">
+            <Button variant="outline" className="w-full rounded-xl py-5 sm:py-6 text-base sm:text-lg bg-transparent">
               Crear cuenta nueva
             </Button>
           </Link>

@@ -74,37 +74,37 @@ export function AboutContent() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/10 via-background to-accent/10 py-20 px-6">
+      <section className="bg-gradient-to-br from-primary/10 via-background to-accent/10 py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <Badge className="mb-4">Quiénes Somos</Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground text-balance">
             Acompañamos con ciencia, amor e inclusión
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
             Somos una comunidad dedicada a apoyar a familias en el camino del autismo que conecta, guía y transforma vidas.
           </p>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto px-[10%] grid md:grid-cols-2 gap-8">
-          <Card className="p-8 space-y-4 hover:shadow-xl transition-shadow">
+      <section className="py-16 md:py-20 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-0 md:px-[10%] grid md:grid-cols-2 gap-6 sm:gap-8">
+          <Card className="p-6 sm:p-8 space-y-4 hover:shadow-xl transition-shadow">
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
               <Target className="h-6 w-6 text-primary" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">Nuestra Misión</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Nuestra Misión</h2>
             <p className="text-muted-foreground leading-relaxed">
               Empoderar a los padrres y cuidadores aa travez de una plataforma digital que les brinde orientaciòn, recursos y acompañamiento interla en su camino de crianza, fortaleciendo su bienestar emcional y su confianza. Desde ese equilibrio,
               Aura impulsa el desarrollo pleno de los niños con autismo, promoviendo su inclusiòn. autonomìa y felicidad.
             </p>
           </Card>
 
-          <Card className="p-8 space-y-4 hover:shadow-xl transition-shadow">
+          <Card className="p-6 sm:p-8 space-y-4 hover:shadow-xl transition-shadow">
             <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center">
               <Award className="h-6 w-6 text-accent" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">Nuestra Visión</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Nuestra Visión</h2>
             <p className="text-muted-foreground leading-relaxed">
               En 5 años, la plataforma será referente en inclusión y desarrollo infantil de varias necesidades específicas.
             </p>
@@ -113,11 +113,11 @@ export function AboutContent() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 px-6 bg-card">
-        <div className="max-w-4xl mx-auto px-[10%] space-y-8">
+      <section className="py-16 md:py-20 px-4 sm:px-6 bg-card">
+        <div className="max-w-4xl mx-auto px-0 md:px-[10%] space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestra Historia</h2>
-            <p className="text-xl text-muted-foreground text-pretty">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Nuestra Historia</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-pretty">
               Un camino nacido del amor, la empatía y el deseo de acompañar mejor.
             </p>
 
@@ -137,11 +137,11 @@ export function AboutContent() {
       </section>
 
            {/* Team - Carrusel Continuo con Controles */}
-      <section className="py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-[10%]">
+      <section className="py-16 md:py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-[10%]">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestro Equipo</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Nuestro Equipo</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
               Profesionales apasionados dedicados a hacer la diferencia
             </p>
           </div>
@@ -192,7 +192,7 @@ export function AboutContent() {
                 {[...team, ...team].map((member, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-[240px] group"
+                    className="flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] group"
                   >
                     <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
                       {/* Foto más compacta con ratio 4:5 */}
@@ -200,15 +200,15 @@ export function AboutContent() {
                         <img
                           src={member.image || "/placeholder.svg"}
                           alt={member.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          className="w-full h-full object-contain md:object-cover p-2 md:p-0 group-hover:scale-110 transition-transform duration-700"
                         />
                         {/* Overlay con gradiente */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
-                      <div className="p-5 space-y-3">
-                        <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                      <div className="p-4 sm:p-5 space-y-3">
+                        <h3 className="text-base sm:text-lg font-bold text-foreground">{member.name}</h3>
                         <p className="text-xs text-primary font-semibold uppercase tracking-wide">{member.role}</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{member.description}</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-3">{member.description}</p>
                       </div>
                     </Card>
                   </div>
@@ -220,25 +220,25 @@ export function AboutContent() {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto px-[10%]">
+      <section className="py-16 md:py-20 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-0 md:px-[10%]">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestros Valores</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Nuestros Valores</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
               Los principios que guían cada decisión y acción en Aura
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="p-6 sm:p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
                   <value.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">{value.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">{value.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{value.description}</p>
               </Card>
             ))}
@@ -247,20 +247,20 @@ export function AboutContent() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 px-6 bg-gradient-to-br from-primary/5 via-background to-accent/5">
-        <div className="max-w-6xl mx-auto px-[10%]">
+      <section className="py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+        <div className="max-w-6xl mx-auto px-0 md:px-[10%]">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Nuestro Impacto</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Nuestro Impacto</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
               Números que reflejan nuestro compromiso con la comunidad
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <Card key={index} className="p-8 text-center space-y-2 hover:shadow-xl transition-shadow">
-                <div className="text-4xl md:text-5xl font-bold text-primary">{stat.number}</div>
-                <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
+              <Card key={index} className="p-5 sm:p-8 text-center space-y-2 hover:shadow-xl transition-shadow">
+                <div className="text-2xl sm:text-4xl md:text-5xl font-bold text-primary">{stat.number}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-medium">{stat.label}</div>
               </Card>
             ))}
           </div>
@@ -270,10 +270,10 @@ export function AboutContent() {
  
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-card">
+      <section className="py-16 md:py-20 px-4 sm:px-6 bg-card">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">Únete a nuestra comunidad</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-balance">Únete a nuestra comunidad</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
             Ya seas una familia buscando apoyo o un profesional queriendo hacer la diferencia, hay un lugar para ti en
             Aura.
           </p>

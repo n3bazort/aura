@@ -21,7 +21,7 @@ interface ProtectedRouteProps {
 }
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
-  const { user, isLoading } = useAuth()
+  const { user, isLoading, continueAsGuest } = useAuth()
   const router = useRouter()
   const pathname = usePathname()
 
@@ -56,8 +56,7 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
                 Contenido Exclusivo
               </DialogTitle>
               <DialogDescription className="text-center text-base">
-                Para acceder a este contenido necesitas tener una cuenta en Aura.
-                Regístrate gratis y únete a nuestra comunidad.
+                Para acceder a este contenido necesitas una cuenta en Aura o puedes entrar como invitado para ver la demo completa.
               </DialogDescription>
             </DialogHeader>
             
@@ -67,6 +66,10 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
                   Crear cuenta gratis
                 </Button>
               </Link>
+
+              <Button variant="secondary" className="w-full" size="lg" onClick={continueAsGuest}>
+                Entrar como invitado
+              </Button>
               
               <Link href="/login" className="block">
                 <Button variant="outline" className="w-full" size="lg">
